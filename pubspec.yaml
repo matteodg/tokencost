@@ -1,6 +1,6 @@
 name: tokencost
 description: "Clientside token counting + price estimation for LLM apps and AI agents ported to Dart from Python package at https://github.com/AgentOps-AI/tokencost."
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/matteodg/tokencost
 
 environment:
@@ -12,3 +12,11 @@ dependencies:
 dev_dependencies:
   test: ^1.25.0
   very_good_analysis: ^5.1.0
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
