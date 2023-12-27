@@ -1,3 +1,5 @@
-# 0.1.0+1
+# 0.0.2
 
-- feat: initial commit 🎉
+- Initial release of tokencost, full port as a Dart package of
+  [AgentOps-AI/tokencost](https://github.com/AgentOps-AI/tokencost) under
+  MIT license.

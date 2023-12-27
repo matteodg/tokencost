@@ -5,9 +5,14 @@
 .packages
 build/
 pubspec.lock
+doc/api/
+coverage/
 
-# IntelliJ related
-.idea/
+# IntelliJ
 *.iml
-*.iws
 *.ipr
+*.iws
+.idea/
+
+# Mac
+.DS_Store
