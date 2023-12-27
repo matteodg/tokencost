@@ -1,3 +1,6 @@
+# 0.0.4
+- Add link to https://github.com/AgentOps-AI/tokencost in README.md
+
 # 0.0.3
 - Add platforms in pubspec.yaml
 
