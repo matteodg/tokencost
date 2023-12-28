@@ -10,7 +10,7 @@ tokencost helps calculate the USD cost of using major Large Language Model
 (LLMs) APIs by calculating the estimated cost of prompts and completions.
 
 Ported from Python tokencost package, see
-[tokencost](https://github.com/AgentOps-AI/tokencost).
+[AgentOps-AI/tokencost](https://github.com/AgentOps-AI/tokencost).
 
 ### Features
 * **LLM Price Tracking** Major LLM providers frequently add new models and

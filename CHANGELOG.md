@@ -1,3 +1,6 @@
+# 0.0.5
+- Improve README.md and pubspec.yaml 
+
 # 0.0.4
 - Add link to https://github.com/AgentOps-AI/tokencost in README.md
 
