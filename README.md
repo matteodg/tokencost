@@ -56,21 +56,6 @@ dart pub add tokencost
 
 ## Usage
 
-### Counting tokens
-
-```dart
-import 'package:tokencost/tokencost.dart';
-
-const messagePrompt = [{'role': 'user', 'content': 'Hello world'}];
-// Counting tokens in prompts formatted as message lists
-print(countMessageTokens(messagePrompt, 'gpt-3.5-turbo'));
-// 9
-
-// Alternatively, counting tokens in string prompts
-print(countStringTokens('Hello world', 'gpt-3.5-turbo'));
-// 2
-```
-
 ### Cost estimates
 Calculating the cost of prompts and completions from OpenAI requests
 ```dart
@@ -105,19 +90,22 @@ const model = 'gpt-3.5-turbo';
 
 final promptCost = calculatePromptCost(promptString, model);
 print('Cost: ${promptCost/usdPerTpu}');
-// Cost: $2e-07
+// Cost: $3e-06
 ```
 
-**Counting tokens**
-```dart
-final prompt = [{'role': 'user', 'content': 'Say this is a test'}];
-final promptMessageTokenCount = countMessageTokens(prompt, model);
-print('promptMessageTokenCount = $promptMessageTokenCount');
-// promptMessageTokenCount = 12
+### Counting tokens
 
-completionStringTokenCount = countStringTokens(response, model);
-print('completionStringTokenCount = $completionStringTokenCount');
-// completionStringTokenCount = 7
+```dart
+import 'package:tokencost/tokencost.dart';
+
+const messagePrompt = [{'role': 'user', 'content': 'Hello world'}];
+// Counting tokens in prompts formatted as message lists
+print(countMessageTokens(messagePrompt, 'gpt-3.5-turbo'));
+// 9
+
+// Alternatively, counting tokens in string prompts
+print(countStringTokens('Hello world', 'gpt-3.5-turbo'));
+// 2
 ```
 
 ## Cost table
