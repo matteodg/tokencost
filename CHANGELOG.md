@@ -1,3 +1,9 @@
+# 0.1.0
+- Consider 0.0.6 invalid as according to https://dart.dev/tools/pub/versioning#semantic-versions we should have
+  changed the minor version number as there is a breaking changed in the API.
+- *Breaking change* in the API: 1 Token Price Unit (TPU) is now defined as 1/100,000,000 of $1 (USD).
+  1,000,000 TPUs would equate to $0.01.
+
 # 0.0.6
 - Update to latest changes in https://github.com/AgentOps-AI/tokencost/, except support for LlamaIndex callbacks
 - Use LiteLLMs cost dictionary from https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json

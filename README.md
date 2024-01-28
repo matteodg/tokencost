@@ -4,6 +4,14 @@
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
 
+## ❗Important❗
+**Consider 0.0.6 invalid as according to https://dart.dev/tools/pub/versioning#semantic-versions we should have
+changed the minor version number as there is a breaking changed in the API.**
+
+**Breaking change in the API**: 1 Token Price Unit (TPU) is now defined as 1/100,000,000 of $1 (USD).
+1,000,000 TPUs would equate to $0.01.
+
+
 ## Overview
 Clientside token counting + price estimation for LLM apps and AI agents.
 tokencost helps calculate the USD cost of using major Large Language Model
