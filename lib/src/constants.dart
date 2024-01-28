@@ -18,9 +18,9 @@ import 'dart:io';
 
 import 'package:yaml/yaml.dart';
 
-/// 1 Token Price Unit (TPU) is defined as 1/10,000,000 of $1 (USD). 100,000
+/// 1 Token Price Unit (TPU) is defined as 1/100,000,000 of $1 (USD). 1,000,000
 /// TPUs would equate to $0.01.
-const usdPerTpu = 10 * 1000 * 1000;
+const usdPerTpu = 100 * 1000 * 1000;
 
 /// The cost of each token for each model: prompt token cost, completion token
 /// cost, and max prompt limit.
