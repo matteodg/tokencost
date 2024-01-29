@@ -1,3 +1,6 @@
+# 0.1.1
+- Converted model_prices.yaml file to a String constant, so it works in other packages
+
 # 0.1.0
 - Consider 0.0.6 invalid as according to https://dart.dev/tools/pub/versioning#semantic-versions we should have
   changed the minor version number as there is a breaking changed in the API.
