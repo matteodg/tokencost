@@ -1,11 +1,10 @@
-
-# Prices last updated Jan 27, 2024 from: https://openai.com/pricing and https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
-
-# Applications using the gpt-3.5-turbo name will automatically be upgraded to the new model on December 11, 2023.
-# Note: Documentation for some of the gpt-3.5s has a max_prompt/context window typo that says 4096.
-# Can send 4097 prompt tokens (which returns 1 completion token, so total 4098)
-# and overloading API returns error message that states limit of 4097.
-
+/// Prices last updated Jan 27, 2024 from: https://openai.com/pricing and https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
+///
+/// Applications using the gpt-3.5-turbo name will automatically be upgraded to the new model on December 11, 2023.
+/// Note: Documentation for some of the gpt-3.5s has a max_prompt/context window typo that says 4096.
+/// Can send 4097 prompt tokens (which returns 1 completion token, so total 4098)
+/// and overloading API returns error message that states limit of 4097.
+const modelPrices = '''
 gpt-4:
   max_prompt: 8192
   prompt: 3000
@@ -690,3 +689,4 @@ voyage/voyage-lite-01:
   max_prompt: 4096
   prompt: 10
   completion: 0
+''';

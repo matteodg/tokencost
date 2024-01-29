@@ -14,8 +14,7 @@
 // is considered a prompt (for the purpose of context) and will thus cost
 // prompt tokens.
 
-import 'dart:io';
-
+import 'package:tokencost/src/model_prices.dart';
 import 'package:yaml/yaml.dart';
 
 /// 1 Token Price Unit (TPU) is defined as 1/100,000,000 of $1 (USD). 1,000,000
@@ -25,9 +24,7 @@ const usdPerTpu = 100 * 1000 * 1000;
 /// The cost of each token for each model: prompt token cost, completion token
 /// cost, and max prompt limit.
 final Map<String, Map<String, int>> tokenCosts = (loadYaml(
-  File(
-    'lib/model_prices.yaml',
-  ).readAsStringSync(),
+  modelPrices,
 ) as YamlMap)
     .nodes
     .map(
