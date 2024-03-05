@@ -1,3 +1,6 @@
+# 0.2.0
+- using `package:money2` instead of TPU units. This is a breaking change, as the API has changed.
+
 # 0.1.1
 - Converted model_prices.yaml file to a String constant, so it works in other packages
 

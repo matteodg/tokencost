@@ -2,7 +2,9 @@
 
 import 'package:tokencost/tokencost.dart';
 
-void main() {
+void main() async {
+  final tokenCost = await TokenCost.getInstance();
+
   const model = 'gpt-3.5-turbo';
   final prompt = [
     {
@@ -12,10 +14,9 @@ void main() {
   ];
   const completion = 'How may I assist you today?';
 
-  final promptCost = calculatePromptCost(prompt, model);
-  final completionCost = calculateCompletionCost(completion, model);
+  final promptCost = tokenCost.calculatePromptCost(prompt, model);
+  final completionCost = tokenCost.calculateCompletionCost(completion, model);
 
   print('$promptCost + $completionCost = ${promptCost + completionCost}');
-  // 135 + 140 = 275 ($0.0000275)
-  // Priced in TPUs (token price units), which is 1/10,000,000th of a USD.
+  // $0.0000135 + $0.0000140 = $0.0000275
 }
