@@ -1,3 +1,6 @@
+# 0.2.1
+- Update prices and context window local file.
+
 # 0.2.0
 - using `package:money2` instead of TPU units. This is a breaking change, as the API has changed.
 

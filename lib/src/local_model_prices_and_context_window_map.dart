@@ -109,7 +109,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'gpt-3.5-turbo': {
     'max_tokens': 4097,
-    'max_input_tokens': 4097,
+    'max_input_tokens': 16385,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.0000015,
     'output_cost_per_token': 0.000002,
@@ -293,6 +293,18 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_pixel': 0.0000000381469,
     'output_cost_per_pixel': 0.0,
     'litellm_provider': 'openai'
+  },
+  'whisper-1': {
+    'mode': 'audio_transcription',
+    'input_cost_per_second': 0,
+    'output_cost_per_second': 0.0001,
+    'litellm_provider': 'openai'
+  },
+  'azure/whisper-1': {
+    'mode': 'audio_transcription',
+    'input_cost_per_second': 0,
+    'output_cost_per_second': 0.0001,
+    'litellm_provider': 'azure'
   },
   'azure/gpt-4-0125-preview': {
     'max_tokens': 128000,
@@ -1262,6 +1274,15 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'output_cost_per_token': 0.0000002,
     'litellm_provider': 'bedrock',
     'mode': 'completion'
+  },
+  'anthropic.claude-3-sonnet-20240229-v1:0': {
+    'max_tokens': 200000,
+    'max_input_tokens': 200000,
+    'max_output_tokens': 4096,
+    'input_cost_per_token': 0.000003,
+    'output_cost_per_token': 0.000015,
+    'litellm_provider': 'bedrock',
+    'mode': 'chat'
   },
   'anthropic.claude-v1': {
     'max_tokens': 100000,
