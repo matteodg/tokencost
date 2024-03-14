@@ -230,14 +230,8 @@ class TokenCost {
           'list of message objects. They are ${prompt.runtimeType} and '
           '${prompt.runtimeType}, respectively.');
     }
-    final doubleInputCostPerToken = _tokenCosts![model]!.inputCostPerToken ?? 0.0;
 
-    final scaledIntInputCostPerToken = (doubleInputCostPerToken * pow(10, _maxScale!)).toInt();
-    return Money.fromInt(
-      scaledIntInputCostPerToken * promptTokens,
-      scale: _maxScale,
-      code: 'USD',
-    );
+    return TokenType.input.calculateCostByTokens(this, promptTokens, model);
   }
 
   /// Calculates the completion's cost in token price units (TPU).
@@ -261,14 +255,38 @@ class TokenCost {
       throw Exception('Model $model is not implemented. Double-check your '
           'spelling, or submit an issue/PR');
     }
-
     final completionTokens = countStringTokens(completion, model);
-    final doubleOutputCostPerToken = _tokenCosts![model]!.outputCostPerToken ?? 0.0;
 
-    final scaledIntCompletionCost = (doubleOutputCostPerToken * pow(10, _maxScale!)).toInt();
+    return TokenType.output.calculateCostByTokens(this, completionTokens, model);
+  }
+
+  /// Calculate the cost based on the number of tokens and the model.
+  ///
+  /// Arguments:
+  /// - [numTokens] The number of tokens.
+  /// - [model] The model name.
+  /// - [tokenType] Type of token ('input' or 'output').
+  ///
+  /// Returns:
+  /// - [Money] The calculated cost in USD.
+  Money calculateCostByTokens(int numTokens, String model, TokenType tokenType) {
+    return tokenType.calculateCostByTokens(this, numTokens, model);
+  }
+}
+
+enum TokenType {
+  input,
+  output;
+
+  Money calculateCostByTokens(TokenCost tokenCost, int numTokens, String model) {
+    final doubleCostPerToken = switch (this) {
+      TokenType.input => tokenCost._tokenCosts![model]!.inputCostPerToken ?? 0.0,
+      TokenType.output => tokenCost._tokenCosts![model]!.outputCostPerToken ?? 0.0
+    };
+    final scaledIntCostPerToken = (doubleCostPerToken * pow(10, tokenCost._maxScale!)).toInt();
     return Money.fromInt(
-      scaledIntCompletionCost * completionTokens,
-      scale: _maxScale,
+      scaledIntCostPerToken * numTokens,
+      scale: tokenCost._maxScale,
       code: 'USD',
     );
   }

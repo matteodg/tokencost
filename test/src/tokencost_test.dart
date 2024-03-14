@@ -180,6 +180,26 @@ void main() {
     });
   });
 
+  group('calculateCostByTokens', () {
+    final testData = <(int, String, TokenType, Money)>[
+      (10, 'gpt-3.5-turbo', TokenType.input, Money.fromInt(150, scale: 7, code: 'USD')),
+      (5, 'gpt-4', TokenType.output, Money.fromInt(30, scale: 5, code: 'USD')),
+      (10, 'ai21.j2-mid-v1', TokenType.input, Money.fromInt(1250, scale: 7, code: 'USD')),
+    ];
+
+    for (final (numTokens, model, tokenType, expectedCost) in testData) {
+      test(model, () {
+        final actualCost = tokenCost.calculateCostByTokens(numTokens, model, tokenType);
+        expect(
+          actualCost,
+          expectedCost,
+          reason: 'expected: <${expectedCost.format('S0.000000000000 CCC')}> '
+              'but was:<${actualCost.format('S0.000000000000 CCC')}>',
+        );
+      });
+    }
+  });
+
   group('calculatePromptCost', () {
     // Costs from https://openai.com/pricing
     // https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo
