@@ -1,3 +1,6 @@
+# 0.2.3
+- Update prices and context window local file to Mar 14, 2024.
+
 # 0.2.2
 - Add TokenCost.calculateCostByTokens() to calculate the cost when token count is available
 

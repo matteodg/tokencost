@@ -1,4 +1,4 @@
-/// Prices last updated Mar 03, 2024 from: https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
+/// Prices last updated Mar 14, 2024 from: https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
 const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   'gpt-4': {
     'max_tokens': 8192,
@@ -652,6 +652,14 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'litellm_provider': 'anthropic',
     'mode': 'chat'
   },
+  'claude-3-haiku-20240307': {
+    'max_tokens': 200000,
+    'max_output_tokens': 4096,
+    'input_cost_per_token': 0.00000025,
+    'output_cost_per_token': 0.00000125,
+    'litellm_provider': 'anthropic',
+    'mode': 'chat'
+  },
   'claude-3-opus-20240229': {
     'max_tokens': 200000,
     'max_output_tokens': 4096,
@@ -978,6 +986,22 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'litellm_provider': 'gemini',
     'mode': 'chat'
   },
+  'command-r': {
+    'max_tokens': 128000,
+    'max_input_tokens': 128000,
+    'max_output_tokens': 4096,
+    'input_cost_per_token': 0.00000050,
+    'output_cost_per_token': 0.0000015,
+    'litellm_provider': 'cohere_chat',
+    'mode': 'chat'
+  },
+  'command-light': {
+    'max_tokens': 4096,
+    'input_cost_per_token': 0.000015,
+    'output_cost_per_token': 0.000015,
+    'litellm_provider': 'cohere_chat',
+    'mode': 'chat'
+  },
   'command-nightly': {
     'max_tokens': 4096,
     'input_cost_per_token': 0.000015,
@@ -986,13 +1010,6 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'completion'
   },
   'command': {
-    'max_tokens': 4096,
-    'input_cost_per_token': 0.000015,
-    'output_cost_per_token': 0.000015,
-    'litellm_provider': 'cohere',
-    'mode': 'completion'
-  },
-  'command-light': {
     'max_tokens': 4096,
     'input_cost_per_token': 0.000015,
     'output_cost_per_token': 0.000015,
@@ -1281,6 +1298,14 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.000003,
     'output_cost_per_token': 0.000015,
+    'litellm_provider': 'bedrock',
+    'mode': 'chat'
+  },
+  'anthropic.claude-3-haiku-20240307-v1:0': {
+    'max_tokens': 200000,
+    'max_output_tokens': 4096,
+    'input_cost_per_token': 0.00000025,
+    'output_cost_per_token': 0.00000125,
     'litellm_provider': 'bedrock',
     'mode': 'chat'
   },
