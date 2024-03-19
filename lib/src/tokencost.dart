@@ -272,13 +272,30 @@ class TokenCost {
   Money calculateCostByTokens(int numTokens, String model, TokenType tokenType) {
     return tokenType.calculateCostByTokens(this, numTokens, model);
   }
+
+  /// Calculate the cost based on the number of pixels and the model.
+  ///
+  /// Arguments:
+  /// - [numPixels] The number of pixels.
+  /// - [model] The model name.
+  /// - [tokenType] Type of token ('input' or 'output').
+  ///
+  /// Returns:
+  /// - [Money] The calculated cost in USD.
+  Money calculateCostByPixels(int numPixels, String model, TokenType tokenType) {
+    return tokenType.calculateCostByPixels(this, numPixels, model);
+  }
 }
 
 enum TokenType {
   input,
   output;
 
-  Money calculateCostByTokens(TokenCost tokenCost, int numTokens, String model) {
+  Money calculateCostByTokens(
+    TokenCost tokenCost,
+    int numTokens,
+    String model,
+  ) {
     final doubleCostPerToken = switch (this) {
       TokenType.input => tokenCost._tokenCosts![model]!.inputCostPerToken ?? 0.0,
       TokenType.output => tokenCost._tokenCosts![model]!.outputCostPerToken ?? 0.0
@@ -286,6 +303,23 @@ enum TokenType {
     final scaledIntCostPerToken = (doubleCostPerToken * pow(10, tokenCost._maxScale!)).toInt();
     return Money.fromInt(
       scaledIntCostPerToken * numTokens,
+      scale: tokenCost._maxScale,
+      code: 'USD',
+    );
+  }
+
+  Money calculateCostByPixels(
+    TokenCost tokenCost,
+    int numPixels,
+    String model,
+  ) {
+    final doubleCostPerPixel = switch (this) {
+      TokenType.input => tokenCost._tokenCosts![model]!.inputCostPerPixel ?? 0.0,
+      TokenType.output => tokenCost._tokenCosts![model]!.outputCostPerPixel ?? 0.0
+    };
+    final scaledIntCostPerPixel = (doubleCostPerPixel * pow(10, tokenCost._maxScale!)).toInt();
+    return Money.fromInt(
+      scaledIntCostPerPixel * numPixels,
       scale: tokenCost._maxScale,
       code: 'USD',
     );
