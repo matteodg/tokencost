@@ -1,3 +1,6 @@
+# 0.2.5
+- Update prices and context window local file to Mar 19, 2024.
+
 # 0.2.4
 - Update prices and context window local file to Mar 18, 2024.
 - Add all other possible fields in `ModelPricesAndContextWindow`
