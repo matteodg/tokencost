@@ -1,3 +1,8 @@
+# 0.2.4
+- Update prices and context window local file to Mar 18, 2024.
+- Add all other possible fields in `ModelPricesAndContextWindow`
+- Add `TokenCost.calculateCostByPixels()` to calculate the cost when pixel count is available
+
 # 0.2.3
 - Update prices and context window local file to Mar 14, 2024.
 
