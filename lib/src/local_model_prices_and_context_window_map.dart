@@ -1,7 +1,7 @@
 /// Prices last updated Mar 14, 2024 from: https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
 const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   'gpt-4': {
-    'max_tokens': 8192,
+    'max_tokens': 4096,
     'max_input_tokens': 8192,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00003,
@@ -11,7 +11,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_function_calling': true
   },
   'gpt-4-turbo-preview': {
-    'max_tokens': 8192,
+    'max_tokens': 4096,
     'max_input_tokens': 8192,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00001,
@@ -22,7 +22,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_parallel_function_calling': true
   },
   'gpt-4-0314': {
-    'max_tokens': 8192,
+    'max_tokens': 4096,
     'max_input_tokens': 8192,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00003,
@@ -31,7 +31,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'gpt-4-0613': {
-    'max_tokens': 8192,
+    'max_tokens': 4096,
     'max_input_tokens': 8192,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00003,
@@ -41,7 +41,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_function_calling': true
   },
   'gpt-4-32k': {
-    'max_tokens': 32768,
+    'max_tokens': 4096,
     'max_input_tokens': 32768,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00006,
@@ -50,7 +50,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'gpt-4-32k-0314': {
-    'max_tokens': 32768,
+    'max_tokens': 4096,
     'max_input_tokens': 32768,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00006,
@@ -59,7 +59,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'gpt-4-32k-0613': {
-    'max_tokens': 32768,
+    'max_tokens': 4096,
     'max_input_tokens': 32768,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00006,
@@ -68,7 +68,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'gpt-4-1106-preview': {
-    'max_tokens': 128000,
+    'max_tokens': 4096,
     'max_input_tokens': 128000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00001,
@@ -79,7 +79,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_parallel_function_calling': true
   },
   'gpt-4-0125-preview': {
-    'max_tokens': 128000,
+    'max_tokens': 4096,
     'max_input_tokens': 128000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00001,
@@ -90,7 +90,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_parallel_function_calling': true
   },
   'gpt-4-vision-preview': {
-    'max_tokens': 128000,
+    'max_tokens': 4096,
     'max_input_tokens': 128000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00001,
@@ -99,7 +99,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'gpt-4-1106-vision-preview': {
-    'max_tokens': 128000,
+    'max_tokens': 4096,
     'max_input_tokens': 128000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00001,
@@ -187,6 +187,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'text-embedding-3-large': {
     'max_tokens': 8191,
+    'max_input_tokens': 8191,
     'input_cost_per_token': 0.00000013,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'openai',
@@ -194,6 +195,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'text-embedding-3-small': {
     'max_tokens': 8191,
+    'max_input_tokens': 8191,
     'input_cost_per_token': 0.00000002,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'openai',
@@ -201,6 +203,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'text-embedding-ada-002': {
     'max_tokens': 8191,
+    'max_input_tokens': 8191,
     'input_cost_per_token': 0.0000001,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'openai',
@@ -208,6 +211,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'text-embedding-ada-002-v2': {
     'max_tokens': 8191,
+    'max_input_tokens': 8191,
     'input_cost_per_token': 0.0000001,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'openai',
@@ -307,7 +311,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'litellm_provider': 'azure'
   },
   'azure/gpt-4-0125-preview': {
-    'max_tokens': 128000,
+    'max_tokens': 4096,
     'max_input_tokens': 128000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00001,
@@ -318,7 +322,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_parallel_function_calling': true
   },
   'azure/gpt-4-1106-preview': {
-    'max_tokens': 128000,
+    'max_tokens': 4096,
     'max_input_tokens': 128000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00001,
@@ -329,7 +333,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_parallel_function_calling': true
   },
   'azure/gpt-4-0613': {
-    'max_tokens': 8192,
+    'max_tokens': 4096,
     'max_input_tokens': 8192,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00003,
@@ -339,7 +343,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_function_calling': true
   },
   'azure/gpt-4-32k-0613': {
-    'max_tokens': 32768,
+    'max_tokens': 4096,
     'max_input_tokens': 32768,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00006,
@@ -348,7 +352,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'azure/gpt-4-32k': {
-    'max_tokens': 32768,
+    'max_tokens': 4096,
     'max_input_tokens': 32768,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00006,
@@ -357,7 +361,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'azure/gpt-4': {
-    'max_tokens': 8192,
+    'max_tokens': 4096,
     'max_input_tokens': 8192,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00003,
@@ -367,7 +371,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_function_calling': true
   },
   'azure/gpt-4-turbo': {
-    'max_tokens': 128000,
+    'max_tokens': 4096,
     'max_input_tokens': 128000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00001,
@@ -378,7 +382,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_parallel_function_calling': true
   },
   'azure/gpt-4-turbo-vision-preview': {
-    'max_tokens': 128000,
+    'max_tokens': 4096,
     'max_input_tokens': 128000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00001,
@@ -387,7 +391,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'azure/gpt-35-turbo-16k-0613': {
-    'max_tokens': 16385,
+    'max_tokens': 4096,
     'max_input_tokens': 16385,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.000003,
@@ -397,7 +401,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_function_calling': true
   },
   'azure/gpt-35-turbo-1106': {
-    'max_tokens': 16384,
+    'max_tokens': 4096,
     'max_input_tokens': 16384,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.0000015,
@@ -408,7 +412,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_parallel_function_calling': true
   },
   'azure/gpt-35-turbo-0125': {
-    'max_tokens': 16384,
+    'max_tokens': 4096,
     'max_input_tokens': 16384,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.0000005,
@@ -419,7 +423,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_parallel_function_calling': true
   },
   'azure/gpt-35-turbo-16k': {
-    'max_tokens': 16385,
+    'max_tokens': 4096,
     'max_input_tokens': 16385,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.000003,
@@ -428,7 +432,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'azure/gpt-35-turbo': {
-    'max_tokens': 4097,
+    'max_tokens': 4096,
     'max_input_tokens': 4097,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.0000015,
@@ -439,6 +443,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'azure/gpt-3.5-turbo-instruct-0914': {
     'max_tokens': 4097,
+    'max_input_tokens': 4097,
     'input_cost_per_token': 0.0000015,
     'output_cost_per_token': 0.000002,
     'litellm_provider': 'text-completion-openai',
@@ -446,6 +451,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'azure/gpt-35-turbo-instruct': {
     'max_tokens': 4097,
+    'max_input_tokens': 4097,
     'input_cost_per_token': 0.0000015,
     'output_cost_per_token': 0.000002,
     'litellm_provider': 'text-completion-openai',
@@ -453,6 +459,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'azure/mistral-large-latest': {
     'max_tokens': 32000,
+    'max_input_tokens': 32000,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
     'litellm_provider': 'azure',
@@ -461,6 +468,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'azure/mistral-large-2402': {
     'max_tokens': 32000,
+    'max_input_tokens': 32000,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
     'litellm_provider': 'azure',
@@ -469,6 +477,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'azure/ada': {
     'max_tokens': 8191,
+    'max_input_tokens': 8191,
     'input_cost_per_token': 0.0000001,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'azure',
@@ -476,6 +485,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'azure/text-embedding-ada-002': {
     'max_tokens': 8191,
+    'max_input_tokens': 8191,
     'input_cost_per_token': 0.0000001,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'azure',
@@ -483,6 +493,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'azure/text-embedding-3-large': {
     'max_tokens': 8191,
+    'max_input_tokens': 8191,
     'input_cost_per_token': 0.00000013,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'azure',
@@ -490,6 +501,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'azure/text-embedding-3-small': {
     'max_tokens': 8191,
+    'max_input_tokens': 8191,
     'input_cost_per_token': 0.00000002,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'azure',
@@ -556,7 +568,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'completion'
   },
   'gpt-3.5-turbo-instruct': {
-    'max_tokens': 8192,
+    'max_tokens': 4096,
     'max_input_tokens': 8192,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.0000015,
@@ -566,13 +578,16 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'gpt-3.5-turbo-instruct-0914': {
     'max_tokens': 4097,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 4097,
     'input_cost_per_token': 0.0000015,
     'output_cost_per_token': 0.000002,
     'litellm_provider': 'text-completion-openai',
     'mode': 'completion'
   },
   'claude-instant-1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000163,
     'output_cost_per_token': 0.00000551,
@@ -580,49 +595,63 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'mistral/mistral-tiny': {
-    'max_tokens': 8192,
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000015,
     'output_cost_per_token': 0.00000046,
     'litellm_provider': 'mistral',
     'mode': 'chat'
   },
   'mistral/mistral-small': {
-    'max_tokens': 8192,
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.000002,
     'output_cost_per_token': 0.000006,
     'litellm_provider': 'mistral',
     'mode': 'chat'
   },
   'mistral/mistral-small-latest': {
-    'max_tokens': 8192,
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.000002,
     'output_cost_per_token': 0.000006,
     'litellm_provider': 'mistral',
     'mode': 'chat'
   },
   'mistral/mistral-medium': {
-    'max_tokens': 8192,
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.0000027,
     'output_cost_per_token': 0.0000081,
     'litellm_provider': 'mistral',
     'mode': 'chat'
   },
   'mistral/mistral-medium-latest': {
-    'max_tokens': 8192,
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.0000027,
     'output_cost_per_token': 0.0000081,
     'litellm_provider': 'mistral',
     'mode': 'chat'
   },
   'mistral/mistral-medium-2312': {
-    'max_tokens': 8192,
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.0000027,
     'output_cost_per_token': 0.0000081,
     'litellm_provider': 'mistral',
     'mode': 'chat'
   },
   'mistral/mistral-large-latest': {
-    'max_tokens': 32000,
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
     'litellm_provider': 'mistral',
@@ -630,7 +659,9 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'supports_function_calling': true
   },
   'mistral/mistral-large-2402': {
-    'max_tokens': 32000,
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
     'litellm_provider': 'mistral',
@@ -639,12 +670,15 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'mistral/mistral-embed': {
     'max_tokens': 8192,
+    'max_input_tokens': 8192,
     'input_cost_per_token': 0.000000111,
     'litellm_provider': 'mistral',
     'mode': 'embedding'
   },
   'groq/llama2-70b-4096': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000070,
     'output_cost_per_token': 0.00000080,
     'litellm_provider': 'groq',
@@ -652,6 +686,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'groq/mixtral-8x7b-32768': {
     'max_tokens': 32768,
+    'max_input_tokens': 32768,
+    'max_output_tokens': 32768,
     'input_cost_per_token': 0.00000027,
     'output_cost_per_token': 0.00000027,
     'litellm_provider': 'groq',
@@ -659,13 +695,16 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'groq/gemma-7b-it': {
     'max_tokens': 8192,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 8192,
     'input_cost_per_token': 0.00000010,
     'output_cost_per_token': 0.00000010,
     'litellm_provider': 'groq',
     'mode': 'chat'
   },
   'claude-instant-1.2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000000163,
     'output_cost_per_token': 0.000000551,
@@ -673,7 +712,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'claude-2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -681,7 +721,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'claude-2.1': {
-    'max_tokens': 200000,
+    'max_tokens': 8191,
+    'max_input_tokens': 200000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -689,7 +730,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'claude-3-haiku-20240307': {
-    'max_tokens': 200000,
+    'max_tokens': 4096,
+    'max_input_tokens': 200000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000025,
     'output_cost_per_token': 0.00000125,
@@ -697,7 +739,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'claude-3-opus-20240229': {
-    'max_tokens': 200000,
+    'max_tokens': 4096,
+    'max_input_tokens': 200000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.000015,
     'output_cost_per_token': 0.000075,
@@ -705,7 +748,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'claude-3-sonnet-20240229': {
-    'max_tokens': 200000,
+    'max_tokens': 4096,
+    'max_input_tokens': 200000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.000003,
     'output_cost_per_token': 0.000015,
@@ -713,133 +757,186 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'text-bison': {
-    'max_tokens': 8192,
+    'max_tokens': 1024,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-text-models',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'text-bison@001': {
-    'max_tokens': 8192,
+    'max_tokens': 1024,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-text-models',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'text-unicorn': {
-    'max_tokens': 8192,
+    'max_tokens': 1024,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.00001,
     'output_cost_per_token': 0.000028,
     'litellm_provider': 'vertex_ai-text-models',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'text-unicorn@001': {
-    'max_tokens': 8192,
+    'max_tokens': 1024,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.00001,
     'output_cost_per_token': 0.000028,
     'litellm_provider': 'vertex_ai-text-models',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'chat-bison': {
     'max_tokens': 4096,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-chat-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'chat-bison@001': {
     'max_tokens': 4096,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-chat-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'chat-bison@002': {
     'max_tokens': 4096,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-chat-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'chat-bison-32k': {
-    'max_tokens': 32000,
+    'max_tokens': 8192,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8192,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-chat-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'code-bison': {
-    'max_tokens': 6144,
+    'max_tokens': 1024,
+    'max_input_tokens': 6144,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-code-text-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'code-bison@001': {
-    'max_tokens': 6144,
+    'max_tokens': 1024,
+    'max_input_tokens': 6144,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-code-text-models',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'code-gecko@001': {
-    'max_tokens': 2048,
+    'max_tokens': 64,
+    'max_input_tokens': 2048,
+    'max_output_tokens': 64,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-code-text-models',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'code-gecko@002': {
-    'max_tokens': 2048,
+    'max_tokens': 64,
+    'max_input_tokens': 2048,
+    'max_output_tokens': 64,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-code-text-models',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'code-gecko': {
-    'max_tokens': 2048,
+    'max_tokens': 64,
+    'max_input_tokens': 2048,
+    'max_output_tokens': 64,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-code-text-models',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'codechat-bison': {
-    'max_tokens': 6144,
+    'max_tokens': 1024,
+    'max_input_tokens': 6144,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-code-chat-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'codechat-bison@001': {
-    'max_tokens': 6144,
+    'max_tokens': 1024,
+    'max_input_tokens': 6144,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-code-chat-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'codechat-bison-32k': {
-    'max_tokens': 32000,
+    'max_tokens': 8192,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8192,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'vertex_ai-code-chat-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini-pro': {
-    'max_tokens': 32760,
-    'max_output_tokens': 2048,
-    'input_cost_per_token': 0.00000025,
-    'output_cost_per_token': 0.0000005,
-    'litellm_provider': 'vertex_ai-language-models',
-    'mode': 'chat'
-  },
-  'gemini-1.0-pro': {
-    'max_tokens': 32760,
+    'max_tokens': 8192,
+    'max_input_tokens': 32760,
     'max_output_tokens': 8192,
     'input_cost_per_token': 0.00000025,
     'output_cost_per_token': 0.0000005,
     'litellm_provider': 'vertex_ai-language-models',
     'mode': 'chat',
-    'supports_function_calling': true
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
+  },
+  'gemini-1.0-pro': {
+    'max_tokens': 8192,
+    'max_input_tokens': 32760,
+    'max_output_tokens': 8192,
+    'input_cost_per_token': 0.00000025,
+    'output_cost_per_token': 0.0000005,
+    'litellm_provider': 'vertex_ai-language-models',
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini-1.5-pro': {
     'max_tokens': 8192,
@@ -848,7 +945,9 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0,
     'output_cost_per_token': 0,
     'litellm_provider': 'vertex_ai-language-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini-1.5-pro-preview-0215': {
     'max_tokens': 8192,
@@ -857,18 +956,27 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0,
     'output_cost_per_token': 0,
     'litellm_provider': 'vertex_ai-language-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini-pro-vision': {
-    'max_tokens': 16384,
+    'max_tokens': 2048,
+    'max_input_tokens': 16384,
     'max_output_tokens': 2048,
+    'max_images_per_prompt': 16,
+    'max_videos_per_prompt': 1,
+    'max_video_length': 2,
     'input_cost_per_token': 0.00000025,
     'output_cost_per_token': 0.0000005,
     'litellm_provider': 'vertex_ai-vision-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini-1.0-pro-vision': {
-    'max_tokens': 16384,
+    'max_tokens': 2048,
+    'max_input_tokens': 16384,
     'max_output_tokens': 2048,
     'max_images_per_prompt': 16,
     'max_videos_per_prompt': 1,
@@ -876,10 +984,13 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0.00000025,
     'output_cost_per_token': 0.0000005,
     'litellm_provider': 'vertex_ai-vision-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini-1.0-pro-vision-001': {
-    'max_tokens': 16384,
+    'max_tokens': 2048,
+    'max_input_tokens': 16384,
     'max_output_tokens': 2048,
     'max_images_per_prompt': 16,
     'max_videos_per_prompt': 1,
@@ -887,7 +998,9 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0.00000025,
     'output_cost_per_token': 0.0000005,
     'litellm_provider': 'vertex_ai-vision-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini-1.5-pro-vision': {
     'max_tokens': 8192,
@@ -899,7 +1012,9 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0,
     'output_cost_per_token': 0,
     'litellm_provider': 'vertex_ai-vision-models',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'textembedding-gecko': {
     'max_tokens': 3072,
@@ -908,7 +1023,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0.00000000625,
     'output_cost_per_token': 0,
     'litellm_provider': 'vertex_ai-embedding-models',
-    'mode': 'embedding'
+    'mode': 'embedding',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'textembedding-gecko-multilingual': {
     'max_tokens': 3072,
@@ -917,7 +1033,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0.00000000625,
     'output_cost_per_token': 0,
     'litellm_provider': 'vertex_ai-embedding-models',
-    'mode': 'embedding'
+    'mode': 'embedding',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'textembedding-gecko-multilingual@001': {
     'max_tokens': 3072,
@@ -926,7 +1043,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0.00000000625,
     'output_cost_per_token': 0,
     'litellm_provider': 'vertex_ai-embedding-models',
-    'mode': 'embedding'
+    'mode': 'embedding',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'textembedding-gecko@001': {
     'max_tokens': 3072,
@@ -935,7 +1053,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0.00000000625,
     'output_cost_per_token': 0,
     'litellm_provider': 'vertex_ai-embedding-models',
-    'mode': 'embedding'
+    'mode': 'embedding',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'textembedding-gecko@003': {
     'max_tokens': 3072,
@@ -944,57 +1063,79 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0.00000000625,
     'output_cost_per_token': 0,
     'litellm_provider': 'vertex_ai-embedding-models',
-    'mode': 'embedding'
+    'mode': 'embedding',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'palm/chat-bison': {
     'max_tokens': 4096,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'palm',
-    'mode': 'chat'
+    'mode': 'chat',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'palm/chat-bison-001': {
     'max_tokens': 4096,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'palm',
-    'mode': 'chat'
+    'mode': 'chat',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'palm/text-bison': {
-    'max_tokens': 8196,
+    'max_tokens': 1024,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'palm',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'palm/text-bison-001': {
-    'max_tokens': 8196,
+    'max_tokens': 1024,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'palm',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'palm/text-bison-safety-off': {
-    'max_tokens': 8196,
+    'max_tokens': 1024,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'palm',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'palm/text-bison-safety-recitation-off': {
-    'max_tokens': 8196,
+    'max_tokens': 1024,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 1024,
     'input_cost_per_token': 0.000000125,
     'output_cost_per_token': 0.000000125,
     'litellm_provider': 'palm',
-    'mode': 'completion'
+    'mode': 'completion',
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini/gemini-pro': {
-    'max_tokens': 30720,
-    'max_output_tokens': 2048,
+    'max_tokens': 8192,
+    'max_input_tokens': 32760,
+    'max_output_tokens': 8192,
     'input_cost_per_token': 0.0,
     'output_cost_per_token': 0.0,
     'litellm_provider': 'gemini',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini/gemini-1.5-pro': {
     'max_tokens': 8192,
@@ -1003,15 +1144,20 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0,
     'output_cost_per_token': 0,
     'litellm_provider': 'gemini',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini/gemini-pro-vision': {
-    'max_tokens': 30720,
+    'max_tokens': 2048,
+    'max_input_tokens': 30720,
     'max_output_tokens': 2048,
     'input_cost_per_token': 0.0,
     'output_cost_per_token': 0.0,
     'litellm_provider': 'gemini',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'gemini/gemini-1.5-pro-vision': {
     'max_tokens': 8192,
@@ -1020,19 +1166,24 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'input_cost_per_token': 0,
     'output_cost_per_token': 0,
     'litellm_provider': 'gemini',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true,
+    'source': 'https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models'
   },
   'command-r': {
-    'max_tokens': 128000,
+    'max_tokens': 4096,
     'max_input_tokens': 128000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000050,
     'output_cost_per_token': 0.0000015,
     'litellm_provider': 'cohere_chat',
-    'mode': 'chat'
+    'mode': 'chat',
+    'supports_function_calling': true
   },
   'command-light': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000015,
     'output_cost_per_token': 0.000015,
     'litellm_provider': 'cohere_chat',
@@ -1040,6 +1191,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'command-nightly': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000015,
     'output_cost_per_token': 0.000015,
     'litellm_provider': 'cohere',
@@ -1047,6 +1200,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'command': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000015,
     'output_cost_per_token': 0.000015,
     'litellm_provider': 'cohere',
@@ -1054,6 +1209,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'command-medium-beta': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000015,
     'output_cost_per_token': 0.000015,
     'litellm_provider': 'cohere',
@@ -1061,6 +1218,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'command-xlarge-beta': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000015,
     'output_cost_per_token': 0.000015,
     'litellm_provider': 'cohere',
@@ -1068,6 +1227,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'replicate/llama-2-70b-chat:2c1608e18606fad2812020dc541930f2d0495ce32eee50074220b87300bc16e1': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0000,
     'output_cost_per_token': 0.0000,
     'litellm_provider': 'replicate',
@@ -1203,6 +1364,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'j2-ultra': {
     'max_tokens': 8192,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 8192,
     'input_cost_per_token': 0.000015,
     'output_cost_per_token': 0.000015,
     'litellm_provider': 'ai21',
@@ -1210,6 +1373,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'j2-mid': {
     'max_tokens': 8192,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 8192,
     'input_cost_per_token': 0.00001,
     'output_cost_per_token': 0.00001,
     'litellm_provider': 'ai21',
@@ -1217,6 +1382,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'j2-light': {
     'max_tokens': 8192,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 8192,
     'input_cost_per_token': 0.000003,
     'output_cost_per_token': 0.000003,
     'litellm_provider': 'ai21',
@@ -1224,6 +1391,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'dolphin': {
     'max_tokens': 16384,
+    'max_input_tokens': 16384,
+    'max_output_tokens': 16384,
     'input_cost_per_token': 0.0000005,
     'output_cost_per_token': 0.0000005,
     'litellm_provider': 'nlp_cloud',
@@ -1231,6 +1400,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'chatdolphin': {
     'max_tokens': 16384,
+    'max_input_tokens': 16384,
+    'max_output_tokens': 16384,
     'input_cost_per_token': 0.0000005,
     'output_cost_per_token': 0.0000005,
     'litellm_provider': 'nlp_cloud',
@@ -1280,6 +1451,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'ai21.j2-mid-v1': {
     'max_tokens': 8191,
+    'max_input_tokens': 8191,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.0000125,
     'output_cost_per_token': 0.0000125,
     'litellm_provider': 'bedrock',
@@ -1287,13 +1460,17 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'ai21.j2-ultra-v1': {
     'max_tokens': 8191,
+    'max_input_tokens': 8191,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.0000188,
     'output_cost_per_token': 0.0000188,
     'litellm_provider': 'bedrock',
     'mode': 'chat'
   },
   'amazon.titan-text-lite-v1': {
-    'max_tokens': 8000,
+    'max_tokens': 4000,
+    'max_input_tokens': 42000,
+    'max_output_tokens': 4000,
     'input_cost_per_token': 0.0000003,
     'output_cost_per_token': 0.0000004,
     'litellm_provider': 'bedrock',
@@ -1301,6 +1478,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'amazon.titan-text-express-v1': {
     'max_tokens': 8000,
+    'max_input_tokens': 42000,
+    'max_output_tokens': 8000,
     'input_cost_per_token': 0.0000013,
     'output_cost_per_token': 0.0000017,
     'litellm_provider': 'bedrock',
@@ -1308,6 +1487,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'amazon.titan-embed-text-v1': {
     'max_tokens': 8192,
+    'max_input_tokens': 8192,
     'output_vector_size': 1536,
     'input_cost_per_token': 0.0000001,
     'output_cost_per_token': 0.0,
@@ -1315,35 +1495,43 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'embedding'
   },
   'mistral.mistral-7b-instruct-v0:2': {
-    'max_tokens': 32000,
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000015,
     'output_cost_per_token': 0.0000002,
     'litellm_provider': 'bedrock',
     'mode': 'chat'
   },
-  'mistral.mixtral-8x7b-instruct': {
-    'max_tokens': 32000,
+  'mistral.mixtral-8x7b-instruct-v0:1': {
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000045,
     'output_cost_per_token': 0.0000007,
     'litellm_provider': 'bedrock',
     'mode': 'chat'
   },
-  'bedrock/us-west-2/mistral.mixtral-8x7b-instruct': {
-    'max_tokens': 32000,
+  'bedrock/us-west-2/mistral.mixtral-8x7b-instruct-v0:1': {
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000045,
     'output_cost_per_token': 0.0000007,
     'litellm_provider': 'bedrock',
     'mode': 'chat'
   },
   'bedrock/us-west-2/mistral.mistral-7b-instruct': {
-    'max_tokens': 32000,
+    'max_tokens': 8191,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000015,
     'output_cost_per_token': 0.0000002,
     'litellm_provider': 'bedrock',
     'mode': 'chat'
   },
   'anthropic.claude-3-sonnet-20240229-v1:0': {
-    'max_tokens': 200000,
+    'max_tokens': 4096,
     'max_input_tokens': 200000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.000003,
@@ -1352,7 +1540,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'anthropic.claude-3-haiku-20240307-v1:0': {
-    'max_tokens': 200000,
+    'max_tokens': 4096,
+    'max_input_tokens': 200000,
     'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000025,
     'output_cost_per_token': 0.00000125,
@@ -1360,7 +1549,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1368,7 +1558,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1376,7 +1567,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1384,7 +1576,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1392,7 +1585,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0455,
     'output_cost_per_second': 0.0455,
@@ -1400,7 +1594,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.02527,
     'output_cost_per_second': 0.02527,
@@ -1408,7 +1603,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1416,7 +1612,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/1-month-commitment/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0415,
     'output_cost_per_second': 0.0415,
@@ -1424,7 +1621,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/6-month-commitment/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.02305,
     'output_cost_per_second': 0.02305,
@@ -1432,7 +1630,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/1-month-commitment/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0175,
     'output_cost_per_second': 0.0175,
@@ -1440,7 +1639,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/6-month-commitment/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.00972,
     'output_cost_per_second': 0.00972,
@@ -1448,7 +1648,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/1-month-commitment/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0175,
     'output_cost_per_second': 0.0175,
@@ -1456,7 +1657,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/6-month-commitment/anthropic.claude-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.00972,
     'output_cost_per_second': 0.00972,
@@ -1464,7 +1666,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1472,7 +1675,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1480,7 +1684,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1488,7 +1693,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1496,7 +1702,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0455,
     'output_cost_per_second': 0.0455,
@@ -1504,7 +1711,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.02527,
     'output_cost_per_second': 0.02527,
@@ -1512,7 +1720,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1520,7 +1729,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/1-month-commitment/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0415,
     'output_cost_per_second': 0.0415,
@@ -1528,7 +1738,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/6-month-commitment/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.02305,
     'output_cost_per_second': 0.02305,
@@ -1536,7 +1747,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/1-month-commitment/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0175,
     'output_cost_per_second': 0.0175,
@@ -1544,7 +1756,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/6-month-commitment/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.00972,
     'output_cost_per_second': 0.00972,
@@ -1552,7 +1765,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/1-month-commitment/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0175,
     'output_cost_per_second': 0.0175,
@@ -1560,7 +1774,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/6-month-commitment/anthropic.claude-v2': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.00972,
     'output_cost_per_second': 0.00972,
@@ -1568,7 +1783,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'anthropic.claude-v2:1': {
-    'max_tokens': 200000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1576,7 +1792,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1584,7 +1801,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1592,7 +1810,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1600,7 +1819,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0455,
     'output_cost_per_second': 0.0455,
@@ -1608,7 +1828,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.02527,
     'output_cost_per_second': 0.02527,
@@ -1616,7 +1837,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.000008,
     'output_cost_per_token': 0.000024,
@@ -1624,7 +1846,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/1-month-commitment/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0415,
     'output_cost_per_second': 0.0415,
@@ -1632,7 +1855,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/6-month-commitment/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.02305,
     'output_cost_per_second': 0.02305,
@@ -1640,7 +1864,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/1-month-commitment/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0175,
     'output_cost_per_second': 0.0175,
@@ -1648,7 +1873,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/6-month-commitment/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.00972,
     'output_cost_per_second': 0.00972,
@@ -1656,7 +1882,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/1-month-commitment/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.0175,
     'output_cost_per_second': 0.0175,
@@ -1664,7 +1891,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/6-month-commitment/anthropic.claude-v2:1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.00972,
     'output_cost_per_second': 0.00972,
@@ -1672,7 +1900,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000163,
     'output_cost_per_token': 0.00000551,
@@ -1680,7 +1909,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.0000008,
     'output_cost_per_token': 0.0000024,
@@ -1688,7 +1918,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/1-month-commitment/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.011,
     'output_cost_per_second': 0.011,
@@ -1696,7 +1927,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-east-1/6-month-commitment/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.00611,
     'output_cost_per_second': 0.00611,
@@ -1704,7 +1936,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/1-month-commitment/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.011,
     'output_cost_per_second': 0.011,
@@ -1712,7 +1945,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/6-month-commitment/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.00611,
     'output_cost_per_second': 0.00611,
@@ -1720,7 +1954,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/us-west-2/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.0000008,
     'output_cost_per_token': 0.0000024,
@@ -1728,7 +1963,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000223,
     'output_cost_per_token': 0.00000755,
@@ -1736,7 +1972,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.01475,
     'output_cost_per_second': 0.01475,
@@ -1744,7 +1981,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.008194,
     'output_cost_per_second': 0.008194,
@@ -1752,7 +1990,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000248,
     'output_cost_per_token': 0.00000838,
@@ -1760,7 +1999,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/1-month-commitment/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.01635,
     'output_cost_per_second': 0.01635,
@@ -1768,7 +2008,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
     'mode': 'chat'
   },
   'bedrock/eu-central-1/6-month-commitment/anthropic.claude-instant-v1': {
-    'max_tokens': 100000,
+    'max_tokens': 8191,
+    'max_input_tokens': 100000,
     'max_output_tokens': 8191,
     'input_cost_per_second': 0.009083,
     'output_cost_per_second': 0.009083,
@@ -1777,6 +2018,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'cohere.command-text-v14': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0000015,
     'output_cost_per_token': 0.0000020,
     'litellm_provider': 'bedrock',
@@ -1784,6 +2027,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'bedrock/*/1-month-commitment/cohere.command-text-v14': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_second': 0.011,
     'output_cost_per_second': 0.011,
     'litellm_provider': 'bedrock',
@@ -1791,13 +2036,17 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'bedrock/*/6-month-commitment/cohere.command-text-v14': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_second': 0.0066027,
     'output_cost_per_second': 0.0066027,
     'litellm_provider': 'bedrock',
     'mode': 'chat'
   },
   'cohere.command-light-text-v14': {
-    'max_tokens': 4000,
+    'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0000003,
     'output_cost_per_token': 0.0000006,
     'litellm_provider': 'bedrock',
@@ -1805,6 +2054,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'bedrock/*/1-month-commitment/cohere.command-light-text-v14': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_second': 0.001902,
     'output_cost_per_second': 0.001902,
     'litellm_provider': 'bedrock',
@@ -1812,6 +2063,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'bedrock/*/6-month-commitment/cohere.command-light-text-v14': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_second': 0.0011416,
     'output_cost_per_second': 0.0011416,
     'litellm_provider': 'bedrock',
@@ -1819,6 +2072,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'cohere.embed-english-v3': {
     'max_tokens': 512,
+    'max_input_tokens': 512,
     'input_cost_per_token': 0.0000001,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'bedrock',
@@ -1826,6 +2080,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'cohere.embed-multilingual-v3': {
     'max_tokens': 512,
+    'max_input_tokens': 512,
     'input_cost_per_token': 0.0000001,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'bedrock',
@@ -1833,6 +2088,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'meta.llama2-13b-chat-v1': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000075,
     'output_cost_per_token': 0.000001,
     'litellm_provider': 'bedrock',
@@ -1840,6 +2097,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'meta.llama2-70b-chat-v1': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000195,
     'output_cost_per_token': 0.00000256,
     'litellm_provider': 'bedrock',
@@ -1889,6 +2148,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'sagemaker/meta-textgeneration-llama-2-7b': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000,
     'output_cost_per_token': 0.000,
     'litellm_provider': 'sagemaker',
@@ -1896,6 +2157,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'sagemaker/meta-textgeneration-llama-2-7b-f': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000,
     'output_cost_per_token': 0.000,
     'litellm_provider': 'sagemaker',
@@ -1903,6 +2166,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'sagemaker/meta-textgeneration-llama-2-13b': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000,
     'output_cost_per_token': 0.000,
     'litellm_provider': 'sagemaker',
@@ -1910,6 +2175,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'sagemaker/meta-textgeneration-llama-2-13b-f': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000,
     'output_cost_per_token': 0.000,
     'litellm_provider': 'sagemaker',
@@ -1917,6 +2184,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'sagemaker/meta-textgeneration-llama-2-70b': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000,
     'output_cost_per_token': 0.000,
     'litellm_provider': 'sagemaker',
@@ -1924,6 +2193,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'sagemaker/meta-textgeneration-llama-2-70b-b-f': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000,
     'output_cost_per_token': 0.000,
     'litellm_provider': 'sagemaker',
@@ -1974,6 +2245,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'ollama/llama2': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0,
     'output_cost_per_token': 0.0,
     'litellm_provider': 'ollama',
@@ -1981,6 +2254,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'ollama/llama2:13b': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0,
     'output_cost_per_token': 0.0,
     'litellm_provider': 'ollama',
@@ -1988,6 +2263,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'ollama/llama2:70b': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0,
     'output_cost_per_token': 0.0,
     'litellm_provider': 'ollama',
@@ -1995,6 +2272,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'ollama/llama2-uncensored': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0,
     'output_cost_per_token': 0.0,
     'litellm_provider': 'ollama',
@@ -2002,6 +2281,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'ollama/mistral': {
     'max_tokens': 8192,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 8192,
     'input_cost_per_token': 0.0,
     'output_cost_per_token': 0.0,
     'litellm_provider': 'ollama',
@@ -2009,6 +2290,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'ollama/codellama': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0,
     'output_cost_per_token': 0.0,
     'litellm_provider': 'ollama',
@@ -2016,6 +2299,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'ollama/orca-mini': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0,
     'output_cost_per_token': 0.0,
     'litellm_provider': 'ollama',
@@ -2023,6 +2308,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'ollama/vicuna': {
     'max_tokens': 2048,
+    'max_input_tokens': 2048,
+    'max_output_tokens': 2048,
     'input_cost_per_token': 0.0,
     'output_cost_per_token': 0.0,
     'litellm_provider': 'ollama',
@@ -2030,6 +2317,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/lizpreciatior/lzlv_70b_fp16_hf': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000070,
     'output_cost_per_token': 0.00000090,
     'litellm_provider': 'deepinfra',
@@ -2037,13 +2326,17 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/Gryphe/MythoMax-L2-13b': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000022,
     'output_cost_per_token': 0.00000022,
     'litellm_provider': 'deepinfra',
     'mode': 'chat'
   },
   'deepinfra/mistralai/Mistral-7B-Instruct-v0.1': {
-    'max_tokens': 32768,
+    'max_tokens': 8191,
+    'max_input_tokens': 32768,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000013,
     'output_cost_per_token': 0.00000013,
     'litellm_provider': 'deepinfra',
@@ -2051,13 +2344,17 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/meta-llama/Llama-2-70b-chat-hf': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000070,
     'output_cost_per_token': 0.00000090,
     'litellm_provider': 'deepinfra',
     'mode': 'chat'
   },
   'deepinfra/cognitivecomputations/dolphin-2.6-mixtral-8x7b': {
-    'max_tokens': 32768,
+    'max_tokens': 8191,
+    'max_input_tokens': 32768,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000027,
     'output_cost_per_token': 0.00000027,
     'litellm_provider': 'deepinfra',
@@ -2065,6 +2362,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/codellama/CodeLlama-34b-Instruct-hf': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000060,
     'output_cost_per_token': 0.00000060,
     'litellm_provider': 'deepinfra',
@@ -2072,6 +2371,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/deepinfra/mixtral': {
     'max_tokens': 4096,
+    'max_input_tokens': 32000,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000027,
     'output_cost_per_token': 0.00000027,
     'litellm_provider': 'deepinfra',
@@ -2079,13 +2380,17 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/Phind/Phind-CodeLlama-34B-v2': {
     'max_tokens': 4096,
+    'max_input_tokens': 16384,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000060,
     'output_cost_per_token': 0.00000060,
     'litellm_provider': 'deepinfra',
     'mode': 'chat'
   },
   'deepinfra/mistralai/Mixtral-8x7B-Instruct-v0.1': {
-    'max_tokens': 32768,
+    'max_tokens': 8191,
+    'max_input_tokens': 32768,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000027,
     'output_cost_per_token': 0.00000027,
     'litellm_provider': 'deepinfra',
@@ -2093,6 +2398,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/deepinfra/airoboros-70b': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000070,
     'output_cost_per_token': 0.00000090,
     'litellm_provider': 'deepinfra',
@@ -2100,6 +2407,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/01-ai/Yi-34B-Chat': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000060,
     'output_cost_per_token': 0.00000060,
     'litellm_provider': 'deepinfra',
@@ -2107,6 +2416,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/01-ai/Yi-6B-200K': {
     'max_tokens': 4096,
+    'max_input_tokens': 200000,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000013,
     'output_cost_per_token': 0.00000013,
     'litellm_provider': 'deepinfra',
@@ -2114,6 +2425,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/jondurbin/airoboros-l2-70b-gpt4-1.4.1': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000070,
     'output_cost_per_token': 0.00000090,
     'litellm_provider': 'deepinfra',
@@ -2121,13 +2434,17 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/meta-llama/Llama-2-13b-chat-hf': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000022,
     'output_cost_per_token': 0.00000022,
     'litellm_provider': 'deepinfra',
     'mode': 'chat'
   },
   'deepinfra/amazon/MistralLite': {
-    'max_tokens': 32768,
+    'max_tokens': 8191,
+    'max_input_tokens': 32768,
+    'max_output_tokens': 8191,
     'input_cost_per_token': 0.00000020,
     'output_cost_per_token': 0.00000020,
     'litellm_provider': 'deepinfra',
@@ -2135,6 +2452,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/meta-llama/Llama-2-7b-chat-hf': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000013,
     'output_cost_per_token': 0.00000013,
     'litellm_provider': 'deepinfra',
@@ -2142,6 +2461,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/01-ai/Yi-34B-200K': {
     'max_tokens': 4096,
+    'max_input_tokens': 200000,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000060,
     'output_cost_per_token': 0.00000060,
     'litellm_provider': 'deepinfra',
@@ -2149,6 +2470,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'deepinfra/openchat/openchat_3.5': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000013,
     'output_cost_per_token': 0.00000013,
     'litellm_provider': 'deepinfra',
@@ -2156,6 +2479,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/codellama-34b-instruct': {
     'max_tokens': 16384,
+    'max_input_tokens': 16384,
+    'max_output_tokens': 16384,
     'input_cost_per_token': 0.00000035,
     'output_cost_per_token': 0.00000140,
     'litellm_provider': 'perplexity',
@@ -2163,6 +2488,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/codellama-70b-instruct': {
     'max_tokens': 16384,
+    'max_input_tokens': 16384,
+    'max_output_tokens': 16384,
     'input_cost_per_token': 0.00000070,
     'output_cost_per_token': 0.00000280,
     'litellm_provider': 'perplexity',
@@ -2170,6 +2497,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/pplx-7b-chat': {
     'max_tokens': 8192,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 8192,
     'input_cost_per_token': 0.00000007,
     'output_cost_per_token': 0.00000028,
     'litellm_provider': 'perplexity',
@@ -2177,6 +2506,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/pplx-70b-chat': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000070,
     'output_cost_per_token': 0.00000280,
     'litellm_provider': 'perplexity',
@@ -2184,6 +2515,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/pplx-7b-online': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0000000,
     'output_cost_per_token': 0.00000028,
     'input_cost_per_request': 0.005,
@@ -2192,6 +2525,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/pplx-70b-online': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.0000000,
     'output_cost_per_token': 0.00000280,
     'input_cost_per_request': 0.005,
@@ -2200,6 +2535,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/llama-2-70b-chat': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000070,
     'output_cost_per_token': 0.00000280,
     'litellm_provider': 'perplexity',
@@ -2207,6 +2544,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/mistral-7b-instruct': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000007,
     'output_cost_per_token': 0.00000028,
     'litellm_provider': 'perplexity',
@@ -2214,6 +2553,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/mixtral-8x7b-instruct': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000007,
     'output_cost_per_token': 0.00000028,
     'litellm_provider': 'perplexity',
@@ -2221,6 +2562,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/sonar-small-chat': {
     'max_tokens': 16384,
+    'max_input_tokens': 16384,
+    'max_output_tokens': 16384,
     'input_cost_per_token': 0.00000007,
     'output_cost_per_token': 0.00000028,
     'litellm_provider': 'perplexity',
@@ -2228,6 +2571,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/sonar-small-online': {
     'max_tokens': 12000,
+    'max_input_tokens': 12000,
+    'max_output_tokens': 12000,
     'input_cost_per_token': 0,
     'output_cost_per_token': 0.00000028,
     'input_cost_per_request': 0.005,
@@ -2236,6 +2581,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/sonar-medium-chat': {
     'max_tokens': 16384,
+    'max_input_tokens': 16384,
+    'max_output_tokens': 16384,
     'input_cost_per_token': 0.0000006,
     'output_cost_per_token': 0.0000018,
     'litellm_provider': 'perplexity',
@@ -2243,6 +2590,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'perplexity/sonar-medium-online': {
     'max_tokens': 12000,
+    'max_input_tokens': 12000,
+    'max_output_tokens': 12000,
     'input_cost_per_token': 0,
     'output_cost_per_token': 0.0000018,
     'input_cost_per_request': 0.005,
@@ -2251,6 +2600,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'anyscale/mistralai/Mistral-7B-Instruct-v0.1': {
     'max_tokens': 16384,
+    'max_input_tokens': 16384,
+    'max_output_tokens': 16384,
     'input_cost_per_token': 0.00000015,
     'output_cost_per_token': 0.00000015,
     'litellm_provider': 'anyscale',
@@ -2259,6 +2610,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'anyscale/Mixtral-8x7B-Instruct-v0.1': {
     'max_tokens': 16384,
+    'max_input_tokens': 16384,
+    'max_output_tokens': 16384,
     'input_cost_per_token': 0.00000015,
     'output_cost_per_token': 0.00000015,
     'litellm_provider': 'anyscale',
@@ -2267,6 +2620,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'anyscale/HuggingFaceH4/zephyr-7b-beta': {
     'max_tokens': 16384,
+    'max_input_tokens': 16384,
+    'max_output_tokens': 16384,
     'input_cost_per_token': 0.00000015,
     'output_cost_per_token': 0.00000015,
     'litellm_provider': 'anyscale',
@@ -2274,6 +2629,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'anyscale/meta-llama/Llama-2-7b-chat-hf': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000015,
     'output_cost_per_token': 0.00000015,
     'litellm_provider': 'anyscale',
@@ -2281,6 +2638,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'anyscale/meta-llama/Llama-2-13b-chat-hf': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.00000025,
     'output_cost_per_token': 0.00000025,
     'litellm_provider': 'anyscale',
@@ -2288,13 +2647,17 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'anyscale/meta-llama/Llama-2-70b-chat-hf': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000001,
     'output_cost_per_token': 0.000001,
     'litellm_provider': 'anyscale',
     'mode': 'chat'
   },
   'anyscale/codellama/CodeLlama-34b-Instruct-hf': {
-    'max_tokens': 16384,
+    'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000001,
     'output_cost_per_token': 0.000001,
     'litellm_provider': 'anyscale',
@@ -2302,6 +2665,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'cloudflare/@cf/meta/llama-2-7b-chat-fp16': {
     'max_tokens': 3072,
+    'max_input_tokens': 3072,
+    'max_output_tokens': 3072,
     'input_cost_per_token': 0.000001923,
     'output_cost_per_token': 0.000001923,
     'litellm_provider': 'cloudflare',
@@ -2309,6 +2674,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'cloudflare/@cf/meta/llama-2-7b-chat-int8': {
     'max_tokens': 2048,
+    'max_input_tokens': 2048,
+    'max_output_tokens': 2048,
     'input_cost_per_token': 0.000001923,
     'output_cost_per_token': 0.000001923,
     'litellm_provider': 'cloudflare',
@@ -2316,6 +2683,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'cloudflare/@cf/mistral/mistral-7b-instruct-v0.1': {
     'max_tokens': 8192,
+    'max_input_tokens': 8192,
+    'max_output_tokens': 8192,
     'input_cost_per_token': 0.000001923,
     'output_cost_per_token': 0.000001923,
     'litellm_provider': 'cloudflare',
@@ -2323,6 +2692,8 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'cloudflare/@hf/thebloke/codellama-7b-instruct-awq': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
+    'max_output_tokens': 4096,
     'input_cost_per_token': 0.000001923,
     'output_cost_per_token': 0.000001923,
     'litellm_provider': 'cloudflare',
@@ -2330,6 +2701,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'voyage/voyage-01': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
     'input_cost_per_token': 0.0000001,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'voyage',
@@ -2337,6 +2709,7 @@ const Map<String, Map<String, dynamic>> kLocalModelPricesAndContextWindowMap = {
   },
   'voyage/voyage-lite-01': {
     'max_tokens': 4096,
+    'max_input_tokens': 4096,
     'input_cost_per_token': 0.0000001,
     'output_cost_per_token': 0.000000,
     'litellm_provider': 'voyage',
