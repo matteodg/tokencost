@@ -55,6 +55,8 @@ mixin _$ModelPricesAndContextWindow {
   String? get litellmProvider => throw _privateConstructorUsedError;
   @JsonKey(name: 'mode')
   String? get mode => throw _privateConstructorUsedError;
+  @JsonKey(name: 'source')
+  String? get source => throw _privateConstructorUsedError;
   @JsonKey(name: 'supports_function_calling')
   bool? get supportsFunctionCalling => throw _privateConstructorUsedError;
   @JsonKey(name: 'supports_parallel_function_calling')
@@ -93,6 +95,7 @@ abstract class $ModelPricesAndContextWindowCopyWith<$Res> {
       @JsonKey(name: 'output_vector_size') int? outputVectorSize,
       @JsonKey(name: 'litellm_provider') String? litellmProvider,
       @JsonKey(name: 'mode') String? mode,
+      @JsonKey(name: 'source') String? source,
       @JsonKey(name: 'supports_function_calling') bool? supportsFunctionCalling,
       @JsonKey(name: 'supports_parallel_function_calling')
       bool? supportsParallelFunctionCalling});
@@ -129,6 +132,7 @@ class _$ModelPricesAndContextWindowCopyWithImpl<$Res,
     Object? outputVectorSize = freezed,
     Object? litellmProvider = freezed,
     Object? mode = freezed,
+    Object? source = freezed,
     Object? supportsFunctionCalling = freezed,
     Object? supportsParallelFunctionCalling = freezed,
   }) {
@@ -201,6 +205,10 @@ class _$ModelPricesAndContextWindowCopyWithImpl<$Res,
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as String?,
+      source: freezed == source
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as String?,
       supportsFunctionCalling: freezed == supportsFunctionCalling
           ? _value.supportsFunctionCalling
           : supportsFunctionCalling // ignore: cast_nullable_to_non_nullable
@@ -241,6 +249,7 @@ abstract class _$$ModelPricesAndContextWindowImplCopyWith<$Res>
       @JsonKey(name: 'output_vector_size') int? outputVectorSize,
       @JsonKey(name: 'litellm_provider') String? litellmProvider,
       @JsonKey(name: 'mode') String? mode,
+      @JsonKey(name: 'source') String? source,
       @JsonKey(name: 'supports_function_calling') bool? supportsFunctionCalling,
       @JsonKey(name: 'supports_parallel_function_calling')
       bool? supportsParallelFunctionCalling});
@@ -276,6 +285,7 @@ class __$$ModelPricesAndContextWindowImplCopyWithImpl<$Res>
     Object? outputVectorSize = freezed,
     Object? litellmProvider = freezed,
     Object? mode = freezed,
+    Object? source = freezed,
     Object? supportsFunctionCalling = freezed,
     Object? supportsParallelFunctionCalling = freezed,
   }) {
@@ -348,6 +358,10 @@ class __$$ModelPricesAndContextWindowImplCopyWithImpl<$Res>
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as String?,
+      source: freezed == source
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as String?,
       supportsFunctionCalling: freezed == supportsFunctionCalling
           ? _value.supportsFunctionCalling
           : supportsFunctionCalling // ignore: cast_nullable_to_non_nullable
@@ -383,6 +397,7 @@ class _$ModelPricesAndContextWindowImpl
       @JsonKey(name: 'output_vector_size') this.outputVectorSize,
       @JsonKey(name: 'litellm_provider') this.litellmProvider,
       @JsonKey(name: 'mode') this.mode,
+      @JsonKey(name: 'source') this.source,
       @JsonKey(name: 'supports_function_calling') this.supportsFunctionCalling,
       @JsonKey(name: 'supports_parallel_function_calling')
       this.supportsParallelFunctionCalling});
@@ -443,6 +458,9 @@ class _$ModelPricesAndContextWindowImpl
   @JsonKey(name: 'mode')
   final String? mode;
   @override
+  @JsonKey(name: 'source')
+  final String? source;
+  @override
   @JsonKey(name: 'supports_function_calling')
   final bool? supportsFunctionCalling;
   @override
@@ -451,7 +469,7 @@ class _$ModelPricesAndContextWindowImpl
 
   @override
   String toString() {
-    return 'ModelPricesAndContextWindow(maxTokens: $maxTokens, maxInputTokens: $maxInputTokens, maxOutputTokens: $maxOutputTokens, maxImagesPerPrompt: $maxImagesPerPrompt, maxVideoLength: $maxVideoLength, maxVideosPerPrompt: $maxVideosPerPrompt, inputCostPerToken: $inputCostPerToken, outputCostPerToken: $outputCostPerToken, inputCostPerPixel: $inputCostPerPixel, outputCostPerPixel: $outputCostPerPixel, inputCostPerSecond: $inputCostPerSecond, outputCostPerSecond: $outputCostPerSecond, inputCostPerRequest: $inputCostPerRequest, outputCostPerImage: $outputCostPerImage, outputVectorSize: $outputVectorSize, litellmProvider: $litellmProvider, mode: $mode, supportsFunctionCalling: $supportsFunctionCalling, supportsParallelFunctionCalling: $supportsParallelFunctionCalling)';
+    return 'ModelPricesAndContextWindow(maxTokens: $maxTokens, maxInputTokens: $maxInputTokens, maxOutputTokens: $maxOutputTokens, maxImagesPerPrompt: $maxImagesPerPrompt, maxVideoLength: $maxVideoLength, maxVideosPerPrompt: $maxVideosPerPrompt, inputCostPerToken: $inputCostPerToken, outputCostPerToken: $outputCostPerToken, inputCostPerPixel: $inputCostPerPixel, outputCostPerPixel: $outputCostPerPixel, inputCostPerSecond: $inputCostPerSecond, outputCostPerSecond: $outputCostPerSecond, inputCostPerRequest: $inputCostPerRequest, outputCostPerImage: $outputCostPerImage, outputVectorSize: $outputVectorSize, litellmProvider: $litellmProvider, mode: $mode, source: $source, supportsFunctionCalling: $supportsFunctionCalling, supportsParallelFunctionCalling: $supportsParallelFunctionCalling)';
   }
 
   @override
@@ -492,6 +510,7 @@ class _$ModelPricesAndContextWindowImpl
             (identical(other.litellmProvider, litellmProvider) ||
                 other.litellmProvider == litellmProvider) &&
             (identical(other.mode, mode) || other.mode == mode) &&
+            (identical(other.source, source) || other.source == source) &&
             (identical(
                     other.supportsFunctionCalling, supportsFunctionCalling) ||
                 other.supportsFunctionCalling == supportsFunctionCalling) &&
@@ -522,6 +541,7 @@ class _$ModelPricesAndContextWindowImpl
         outputVectorSize,
         litellmProvider,
         mode,
+        source,
         supportsFunctionCalling,
         supportsParallelFunctionCalling
       ]);
@@ -563,6 +583,7 @@ abstract class _ModelPricesAndContextWindow
       @JsonKey(name: 'output_vector_size') final int? outputVectorSize,
       @JsonKey(name: 'litellm_provider') final String? litellmProvider,
       @JsonKey(name: 'mode') final String? mode,
+      @JsonKey(name: 'source') final String? source,
       @JsonKey(name: 'supports_function_calling')
       final bool? supportsFunctionCalling,
       @JsonKey(name: 'supports_parallel_function_calling')
@@ -623,6 +644,9 @@ abstract class _ModelPricesAndContextWindow
   @override
   @JsonKey(name: 'mode')
   String? get mode;
+  @override
+  @JsonKey(name: 'source')
+  String? get source;
   @override
   @JsonKey(name: 'supports_function_calling')
   bool? get supportsFunctionCalling;

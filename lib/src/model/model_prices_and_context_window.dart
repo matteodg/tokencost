@@ -25,6 +25,7 @@ class ModelPricesAndContextWindow with _$ModelPricesAndContextWindow {
     @JsonKey(name: 'output_vector_size') int? outputVectorSize,
     @JsonKey(name: 'litellm_provider') String? litellmProvider,
     @JsonKey(name: 'mode') String? mode,
+    @JsonKey(name: 'source') String? source,
     @JsonKey(name: 'supports_function_calling') bool? supportsFunctionCalling,
     @JsonKey(name: 'supports_parallel_function_calling') bool? supportsParallelFunctionCalling,
   }) = _ModelPricesAndContextWindow;

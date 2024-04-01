@@ -26,6 +26,7 @@ _$ModelPricesAndContextWindowImpl _$$ModelPricesAndContextWindowImplFromJson(
       outputVectorSize: json['output_vector_size'] as int?,
       litellmProvider: json['litellm_provider'] as String?,
       mode: json['mode'] as String?,
+      source: json['source'] as String?,
       supportsFunctionCalling: json['supports_function_calling'] as bool?,
       supportsParallelFunctionCalling:
           json['supports_parallel_function_calling'] as bool?,
@@ -51,6 +52,7 @@ Map<String, dynamic> _$$ModelPricesAndContextWindowImplToJson(
       'output_vector_size': instance.outputVectorSize,
       'litellm_provider': instance.litellmProvider,
       'mode': instance.mode,
+      'source': instance.source,
       'supports_function_calling': instance.supportsFunctionCalling,
       'supports_parallel_function_calling':
           instance.supportsParallelFunctionCalling,
