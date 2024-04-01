@@ -1,3 +1,6 @@
+# 0.2.6
+- Update prices and context window local file to Apr 02, 2024.
+
 # 0.2.5
 - Update prices and context window local file to Mar 19, 2024.
 
