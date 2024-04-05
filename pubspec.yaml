@@ -13,7 +13,7 @@ dependencies:
   freezed_annotation: ^2.4.1
   http: ^1.2.1
   json_annotation: ^4.8.1
-  money2: ^4.1.0
+  money2: ">=4.1.0 <6.0.0"
   tiktoken: ^1.0.3
 
 dev_dependencies:
