@@ -30,6 +30,9 @@ _$ModelPricesAndContextWindowImpl _$$ModelPricesAndContextWindowImplFromJson(
       supportsFunctionCalling: json['supports_function_calling'] as bool?,
       supportsParallelFunctionCalling:
           json['supports_parallel_function_calling'] as bool?,
+      supportsToolChoice: json['supports_tool_choice'] as bool?,
+      supportsVision: json['supports_vision'] as bool?,
+      toolUseSystemPromptTokens: json['tool_use_system_prompt_tokens'] as int?,
     );
 
 Map<String, dynamic> _$$ModelPricesAndContextWindowImplToJson(
@@ -56,4 +59,7 @@ Map<String, dynamic> _$$ModelPricesAndContextWindowImplToJson(
       'supports_function_calling': instance.supportsFunctionCalling,
       'supports_parallel_function_calling':
           instance.supportsParallelFunctionCalling,
+      'supports_tool_choice': instance.supportsToolChoice,
+      'supports_vision': instance.supportsVision,
+      'tool_use_system_prompt_tokens': instance.toolUseSystemPromptTokens,
     };

@@ -62,6 +62,12 @@ mixin _$ModelPricesAndContextWindow {
   @JsonKey(name: 'supports_parallel_function_calling')
   bool? get supportsParallelFunctionCalling =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'supports_tool_choice')
+  bool? get supportsToolChoice => throw _privateConstructorUsedError;
+  @JsonKey(name: 'supports_vision')
+  bool? get supportsVision => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tool_use_system_prompt_tokens')
+  int? get toolUseSystemPromptTokens => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -98,7 +104,11 @@ abstract class $ModelPricesAndContextWindowCopyWith<$Res> {
       @JsonKey(name: 'source') String? source,
       @JsonKey(name: 'supports_function_calling') bool? supportsFunctionCalling,
       @JsonKey(name: 'supports_parallel_function_calling')
-      bool? supportsParallelFunctionCalling});
+      bool? supportsParallelFunctionCalling,
+      @JsonKey(name: 'supports_tool_choice') bool? supportsToolChoice,
+      @JsonKey(name: 'supports_vision') bool? supportsVision,
+      @JsonKey(name: 'tool_use_system_prompt_tokens')
+      int? toolUseSystemPromptTokens});
 }
 
 /// @nodoc
@@ -135,6 +145,9 @@ class _$ModelPricesAndContextWindowCopyWithImpl<$Res,
     Object? source = freezed,
     Object? supportsFunctionCalling = freezed,
     Object? supportsParallelFunctionCalling = freezed,
+    Object? supportsToolChoice = freezed,
+    Object? supportsVision = freezed,
+    Object? toolUseSystemPromptTokens = freezed,
   }) {
     return _then(_value.copyWith(
       maxTokens: freezed == maxTokens
@@ -218,6 +231,18 @@ class _$ModelPricesAndContextWindowCopyWithImpl<$Res,
           ? _value.supportsParallelFunctionCalling
           : supportsParallelFunctionCalling // ignore: cast_nullable_to_non_nullable
               as bool?,
+      supportsToolChoice: freezed == supportsToolChoice
+          ? _value.supportsToolChoice
+          : supportsToolChoice // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      supportsVision: freezed == supportsVision
+          ? _value.supportsVision
+          : supportsVision // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      toolUseSystemPromptTokens: freezed == toolUseSystemPromptTokens
+          ? _value.toolUseSystemPromptTokens
+          : toolUseSystemPromptTokens // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -252,7 +277,11 @@ abstract class _$$ModelPricesAndContextWindowImplCopyWith<$Res>
       @JsonKey(name: 'source') String? source,
       @JsonKey(name: 'supports_function_calling') bool? supportsFunctionCalling,
       @JsonKey(name: 'supports_parallel_function_calling')
-      bool? supportsParallelFunctionCalling});
+      bool? supportsParallelFunctionCalling,
+      @JsonKey(name: 'supports_tool_choice') bool? supportsToolChoice,
+      @JsonKey(name: 'supports_vision') bool? supportsVision,
+      @JsonKey(name: 'tool_use_system_prompt_tokens')
+      int? toolUseSystemPromptTokens});
 }
 
 /// @nodoc
@@ -288,6 +317,9 @@ class __$$ModelPricesAndContextWindowImplCopyWithImpl<$Res>
     Object? source = freezed,
     Object? supportsFunctionCalling = freezed,
     Object? supportsParallelFunctionCalling = freezed,
+    Object? supportsToolChoice = freezed,
+    Object? supportsVision = freezed,
+    Object? toolUseSystemPromptTokens = freezed,
   }) {
     return _then(_$ModelPricesAndContextWindowImpl(
       maxTokens: freezed == maxTokens
@@ -371,6 +403,18 @@ class __$$ModelPricesAndContextWindowImplCopyWithImpl<$Res>
           ? _value.supportsParallelFunctionCalling
           : supportsParallelFunctionCalling // ignore: cast_nullable_to_non_nullable
               as bool?,
+      supportsToolChoice: freezed == supportsToolChoice
+          ? _value.supportsToolChoice
+          : supportsToolChoice // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      supportsVision: freezed == supportsVision
+          ? _value.supportsVision
+          : supportsVision // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      toolUseSystemPromptTokens: freezed == toolUseSystemPromptTokens
+          ? _value.toolUseSystemPromptTokens
+          : toolUseSystemPromptTokens // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -400,7 +444,11 @@ class _$ModelPricesAndContextWindowImpl
       @JsonKey(name: 'source') this.source,
       @JsonKey(name: 'supports_function_calling') this.supportsFunctionCalling,
       @JsonKey(name: 'supports_parallel_function_calling')
-      this.supportsParallelFunctionCalling});
+      this.supportsParallelFunctionCalling,
+      @JsonKey(name: 'supports_tool_choice') this.supportsToolChoice,
+      @JsonKey(name: 'supports_vision') this.supportsVision,
+      @JsonKey(name: 'tool_use_system_prompt_tokens')
+      this.toolUseSystemPromptTokens});
 
   factory _$ModelPricesAndContextWindowImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -466,10 +514,19 @@ class _$ModelPricesAndContextWindowImpl
   @override
   @JsonKey(name: 'supports_parallel_function_calling')
   final bool? supportsParallelFunctionCalling;
+  @override
+  @JsonKey(name: 'supports_tool_choice')
+  final bool? supportsToolChoice;
+  @override
+  @JsonKey(name: 'supports_vision')
+  final bool? supportsVision;
+  @override
+  @JsonKey(name: 'tool_use_system_prompt_tokens')
+  final int? toolUseSystemPromptTokens;
 
   @override
   String toString() {
-    return 'ModelPricesAndContextWindow(maxTokens: $maxTokens, maxInputTokens: $maxInputTokens, maxOutputTokens: $maxOutputTokens, maxImagesPerPrompt: $maxImagesPerPrompt, maxVideoLength: $maxVideoLength, maxVideosPerPrompt: $maxVideosPerPrompt, inputCostPerToken: $inputCostPerToken, outputCostPerToken: $outputCostPerToken, inputCostPerPixel: $inputCostPerPixel, outputCostPerPixel: $outputCostPerPixel, inputCostPerSecond: $inputCostPerSecond, outputCostPerSecond: $outputCostPerSecond, inputCostPerRequest: $inputCostPerRequest, outputCostPerImage: $outputCostPerImage, outputVectorSize: $outputVectorSize, litellmProvider: $litellmProvider, mode: $mode, source: $source, supportsFunctionCalling: $supportsFunctionCalling, supportsParallelFunctionCalling: $supportsParallelFunctionCalling)';
+    return 'ModelPricesAndContextWindow(maxTokens: $maxTokens, maxInputTokens: $maxInputTokens, maxOutputTokens: $maxOutputTokens, maxImagesPerPrompt: $maxImagesPerPrompt, maxVideoLength: $maxVideoLength, maxVideosPerPrompt: $maxVideosPerPrompt, inputCostPerToken: $inputCostPerToken, outputCostPerToken: $outputCostPerToken, inputCostPerPixel: $inputCostPerPixel, outputCostPerPixel: $outputCostPerPixel, inputCostPerSecond: $inputCostPerSecond, outputCostPerSecond: $outputCostPerSecond, inputCostPerRequest: $inputCostPerRequest, outputCostPerImage: $outputCostPerImage, outputVectorSize: $outputVectorSize, litellmProvider: $litellmProvider, mode: $mode, source: $source, supportsFunctionCalling: $supportsFunctionCalling, supportsParallelFunctionCalling: $supportsParallelFunctionCalling, supportsToolChoice: $supportsToolChoice, supportsVision: $supportsVision, toolUseSystemPromptTokens: $toolUseSystemPromptTokens)';
   }
 
   @override
@@ -517,7 +574,14 @@ class _$ModelPricesAndContextWindowImpl
             (identical(other.supportsParallelFunctionCalling,
                     supportsParallelFunctionCalling) ||
                 other.supportsParallelFunctionCalling ==
-                    supportsParallelFunctionCalling));
+                    supportsParallelFunctionCalling) &&
+            (identical(other.supportsToolChoice, supportsToolChoice) ||
+                other.supportsToolChoice == supportsToolChoice) &&
+            (identical(other.supportsVision, supportsVision) ||
+                other.supportsVision == supportsVision) &&
+            (identical(other.toolUseSystemPromptTokens,
+                    toolUseSystemPromptTokens) ||
+                other.toolUseSystemPromptTokens == toolUseSystemPromptTokens));
   }
 
   @JsonKey(ignore: true)
@@ -543,7 +607,10 @@ class _$ModelPricesAndContextWindowImpl
         mode,
         source,
         supportsFunctionCalling,
-        supportsParallelFunctionCalling
+        supportsParallelFunctionCalling,
+        supportsToolChoice,
+        supportsVision,
+        toolUseSystemPromptTokens
       ]);
 
   @JsonKey(ignore: true)
@@ -587,8 +654,12 @@ abstract class _ModelPricesAndContextWindow
       @JsonKey(name: 'supports_function_calling')
       final bool? supportsFunctionCalling,
       @JsonKey(name: 'supports_parallel_function_calling')
-      final bool?
-          supportsParallelFunctionCalling}) = _$ModelPricesAndContextWindowImpl;
+      final bool? supportsParallelFunctionCalling,
+      @JsonKey(name: 'supports_tool_choice') final bool? supportsToolChoice,
+      @JsonKey(name: 'supports_vision') final bool? supportsVision,
+      @JsonKey(name: 'tool_use_system_prompt_tokens')
+      final int?
+          toolUseSystemPromptTokens}) = _$ModelPricesAndContextWindowImpl;
 
   factory _ModelPricesAndContextWindow.fromJson(Map<String, dynamic> json) =
       _$ModelPricesAndContextWindowImpl.fromJson;
@@ -653,6 +724,15 @@ abstract class _ModelPricesAndContextWindow
   @override
   @JsonKey(name: 'supports_parallel_function_calling')
   bool? get supportsParallelFunctionCalling;
+  @override
+  @JsonKey(name: 'supports_tool_choice')
+  bool? get supportsToolChoice;
+  @override
+  @JsonKey(name: 'supports_vision')
+  bool? get supportsVision;
+  @override
+  @JsonKey(name: 'tool_use_system_prompt_tokens')
+  int? get toolUseSystemPromptTokens;
   @override
   @JsonKey(ignore: true)
   _$$ModelPricesAndContextWindowImplCopyWith<_$ModelPricesAndContextWindowImpl>

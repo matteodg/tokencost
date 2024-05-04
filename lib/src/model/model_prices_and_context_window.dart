@@ -28,6 +28,9 @@ class ModelPricesAndContextWindow with _$ModelPricesAndContextWindow {
     @JsonKey(name: 'source') String? source,
     @JsonKey(name: 'supports_function_calling') bool? supportsFunctionCalling,
     @JsonKey(name: 'supports_parallel_function_calling') bool? supportsParallelFunctionCalling,
+    @JsonKey(name: 'supports_tool_choice') bool? supportsToolChoice,
+    @JsonKey(name: 'supports_vision') bool? supportsVision,
+    @JsonKey(name: 'tool_use_system_prompt_tokens') int? toolUseSystemPromptTokens,
   }) = _ModelPricesAndContextWindow;
 
   factory ModelPricesAndContextWindow.fromJson(Map<String, dynamic> json) =>
