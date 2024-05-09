@@ -9,12 +9,12 @@ part of 'model_prices_and_context_window.dart';
 _$ModelPricesAndContextWindowImpl _$$ModelPricesAndContextWindowImplFromJson(
         Map<String, dynamic> json) =>
     _$ModelPricesAndContextWindowImpl(
-      maxTokens: json['max_tokens'] as int?,
-      maxInputTokens: json['max_input_tokens'] as int?,
-      maxOutputTokens: json['max_output_tokens'] as int?,
-      maxImagesPerPrompt: json['max_images_per_prompt'] as int?,
-      maxVideoLength: json['max_video_length'] as int?,
-      maxVideosPerPrompt: json['max_videos_per_prompt'] as int?,
+      maxTokens: (json['max_tokens'] as num?)?.toInt(),
+      maxInputTokens: (json['max_input_tokens'] as num?)?.toInt(),
+      maxOutputTokens: (json['max_output_tokens'] as num?)?.toInt(),
+      maxImagesPerPrompt: (json['max_images_per_prompt'] as num?)?.toInt(),
+      maxVideoLength: (json['max_video_length'] as num?)?.toInt(),
+      maxVideosPerPrompt: (json['max_videos_per_prompt'] as num?)?.toInt(),
       inputCostPerToken: (json['input_cost_per_token'] as num?)?.toDouble(),
       outputCostPerToken: (json['output_cost_per_token'] as num?)?.toDouble(),
       inputCostPerPixel: (json['input_cost_per_pixel'] as num?)?.toDouble(),
@@ -23,7 +23,7 @@ _$ModelPricesAndContextWindowImpl _$$ModelPricesAndContextWindowImplFromJson(
       outputCostPerSecond: (json['output_cost_per_second'] as num?)?.toDouble(),
       inputCostPerRequest: (json['input_cost_per_request'] as num?)?.toDouble(),
       outputCostPerImage: (json['output_cost_per_image'] as num?)?.toDouble(),
-      outputVectorSize: json['output_vector_size'] as int?,
+      outputVectorSize: (json['output_vector_size'] as num?)?.toInt(),
       litellmProvider: json['litellm_provider'] as String?,
       mode: json['mode'] as String?,
       source: json['source'] as String?,
@@ -32,7 +32,8 @@ _$ModelPricesAndContextWindowImpl _$$ModelPricesAndContextWindowImplFromJson(
           json['supports_parallel_function_calling'] as bool?,
       supportsToolChoice: json['supports_tool_choice'] as bool?,
       supportsVision: json['supports_vision'] as bool?,
-      toolUseSystemPromptTokens: json['tool_use_system_prompt_tokens'] as int?,
+      toolUseSystemPromptTokens:
+          (json['tool_use_system_prompt_tokens'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$ModelPricesAndContextWindowImplToJson(

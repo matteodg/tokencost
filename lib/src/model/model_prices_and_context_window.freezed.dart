@@ -21,52 +21,29 @@ ModelPricesAndContextWindow _$ModelPricesAndContextWindowFromJson(
 
 /// @nodoc
 mixin _$ModelPricesAndContextWindow {
-  @JsonKey(name: 'max_tokens')
   int? get maxTokens => throw _privateConstructorUsedError;
-  @JsonKey(name: 'max_input_tokens')
   int? get maxInputTokens => throw _privateConstructorUsedError;
-  @JsonKey(name: 'max_output_tokens')
   int? get maxOutputTokens => throw _privateConstructorUsedError;
-  @JsonKey(name: 'max_images_per_prompt')
   int? get maxImagesPerPrompt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'max_video_length')
   int? get maxVideoLength => throw _privateConstructorUsedError;
-  @JsonKey(name: 'max_videos_per_prompt')
   int? get maxVideosPerPrompt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'input_cost_per_token')
   double? get inputCostPerToken => throw _privateConstructorUsedError;
-  @JsonKey(name: 'output_cost_per_token')
   double? get outputCostPerToken => throw _privateConstructorUsedError;
-  @JsonKey(name: 'input_cost_per_pixel')
   double? get inputCostPerPixel => throw _privateConstructorUsedError;
-  @JsonKey(name: 'output_cost_per_pixel')
   double? get outputCostPerPixel => throw _privateConstructorUsedError;
-  @JsonKey(name: 'input_cost_per_second')
   double? get inputCostPerSecond => throw _privateConstructorUsedError;
-  @JsonKey(name: 'output_cost_per_second')
   double? get outputCostPerSecond => throw _privateConstructorUsedError;
-  @JsonKey(name: 'input_cost_per_request')
   double? get inputCostPerRequest => throw _privateConstructorUsedError;
-  @JsonKey(name: 'output_cost_per_image')
   double? get outputCostPerImage => throw _privateConstructorUsedError;
-  @JsonKey(name: 'output_vector_size')
   int? get outputVectorSize => throw _privateConstructorUsedError;
-  @JsonKey(name: 'litellm_provider')
   String? get litellmProvider => throw _privateConstructorUsedError;
-  @JsonKey(name: 'mode')
   String? get mode => throw _privateConstructorUsedError;
-  @JsonKey(name: 'source')
   String? get source => throw _privateConstructorUsedError;
-  @JsonKey(name: 'supports_function_calling')
   bool? get supportsFunctionCalling => throw _privateConstructorUsedError;
-  @JsonKey(name: 'supports_parallel_function_calling')
   bool? get supportsParallelFunctionCalling =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: 'supports_tool_choice')
   bool? get supportsToolChoice => throw _privateConstructorUsedError;
-  @JsonKey(name: 'supports_vision')
   bool? get supportsVision => throw _privateConstructorUsedError;
-  @JsonKey(name: 'tool_use_system_prompt_tokens')
   int? get toolUseSystemPromptTokens => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -84,30 +61,28 @@ abstract class $ModelPricesAndContextWindowCopyWith<$Res> {
           ModelPricesAndContextWindow>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'max_tokens') int? maxTokens,
-      @JsonKey(name: 'max_input_tokens') int? maxInputTokens,
-      @JsonKey(name: 'max_output_tokens') int? maxOutputTokens,
-      @JsonKey(name: 'max_images_per_prompt') int? maxImagesPerPrompt,
-      @JsonKey(name: 'max_video_length') int? maxVideoLength,
-      @JsonKey(name: 'max_videos_per_prompt') int? maxVideosPerPrompt,
-      @JsonKey(name: 'input_cost_per_token') double? inputCostPerToken,
-      @JsonKey(name: 'output_cost_per_token') double? outputCostPerToken,
-      @JsonKey(name: 'input_cost_per_pixel') double? inputCostPerPixel,
-      @JsonKey(name: 'output_cost_per_pixel') double? outputCostPerPixel,
-      @JsonKey(name: 'input_cost_per_second') double? inputCostPerSecond,
-      @JsonKey(name: 'output_cost_per_second') double? outputCostPerSecond,
-      @JsonKey(name: 'input_cost_per_request') double? inputCostPerRequest,
-      @JsonKey(name: 'output_cost_per_image') double? outputCostPerImage,
-      @JsonKey(name: 'output_vector_size') int? outputVectorSize,
-      @JsonKey(name: 'litellm_provider') String? litellmProvider,
-      @JsonKey(name: 'mode') String? mode,
-      @JsonKey(name: 'source') String? source,
-      @JsonKey(name: 'supports_function_calling') bool? supportsFunctionCalling,
-      @JsonKey(name: 'supports_parallel_function_calling')
+      {int? maxTokens,
+      int? maxInputTokens,
+      int? maxOutputTokens,
+      int? maxImagesPerPrompt,
+      int? maxVideoLength,
+      int? maxVideosPerPrompt,
+      double? inputCostPerToken,
+      double? outputCostPerToken,
+      double? inputCostPerPixel,
+      double? outputCostPerPixel,
+      double? inputCostPerSecond,
+      double? outputCostPerSecond,
+      double? inputCostPerRequest,
+      double? outputCostPerImage,
+      int? outputVectorSize,
+      String? litellmProvider,
+      String? mode,
+      String? source,
+      bool? supportsFunctionCalling,
       bool? supportsParallelFunctionCalling,
-      @JsonKey(name: 'supports_tool_choice') bool? supportsToolChoice,
-      @JsonKey(name: 'supports_vision') bool? supportsVision,
-      @JsonKey(name: 'tool_use_system_prompt_tokens')
+      bool? supportsToolChoice,
+      bool? supportsVision,
       int? toolUseSystemPromptTokens});
 }
 
@@ -257,30 +232,28 @@ abstract class _$$ModelPricesAndContextWindowImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'max_tokens') int? maxTokens,
-      @JsonKey(name: 'max_input_tokens') int? maxInputTokens,
-      @JsonKey(name: 'max_output_tokens') int? maxOutputTokens,
-      @JsonKey(name: 'max_images_per_prompt') int? maxImagesPerPrompt,
-      @JsonKey(name: 'max_video_length') int? maxVideoLength,
-      @JsonKey(name: 'max_videos_per_prompt') int? maxVideosPerPrompt,
-      @JsonKey(name: 'input_cost_per_token') double? inputCostPerToken,
-      @JsonKey(name: 'output_cost_per_token') double? outputCostPerToken,
-      @JsonKey(name: 'input_cost_per_pixel') double? inputCostPerPixel,
-      @JsonKey(name: 'output_cost_per_pixel') double? outputCostPerPixel,
-      @JsonKey(name: 'input_cost_per_second') double? inputCostPerSecond,
-      @JsonKey(name: 'output_cost_per_second') double? outputCostPerSecond,
-      @JsonKey(name: 'input_cost_per_request') double? inputCostPerRequest,
-      @JsonKey(name: 'output_cost_per_image') double? outputCostPerImage,
-      @JsonKey(name: 'output_vector_size') int? outputVectorSize,
-      @JsonKey(name: 'litellm_provider') String? litellmProvider,
-      @JsonKey(name: 'mode') String? mode,
-      @JsonKey(name: 'source') String? source,
-      @JsonKey(name: 'supports_function_calling') bool? supportsFunctionCalling,
-      @JsonKey(name: 'supports_parallel_function_calling')
+      {int? maxTokens,
+      int? maxInputTokens,
+      int? maxOutputTokens,
+      int? maxImagesPerPrompt,
+      int? maxVideoLength,
+      int? maxVideosPerPrompt,
+      double? inputCostPerToken,
+      double? outputCostPerToken,
+      double? inputCostPerPixel,
+      double? outputCostPerPixel,
+      double? inputCostPerSecond,
+      double? outputCostPerSecond,
+      double? inputCostPerRequest,
+      double? outputCostPerImage,
+      int? outputVectorSize,
+      String? litellmProvider,
+      String? mode,
+      String? source,
+      bool? supportsFunctionCalling,
       bool? supportsParallelFunctionCalling,
-      @JsonKey(name: 'supports_tool_choice') bool? supportsToolChoice,
-      @JsonKey(name: 'supports_vision') bool? supportsVision,
-      @JsonKey(name: 'tool_use_system_prompt_tokens')
+      bool? supportsToolChoice,
+      bool? supportsVision,
       int? toolUseSystemPromptTokens});
 }
 
@@ -420,34 +393,33 @@ class __$$ModelPricesAndContextWindowImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$ModelPricesAndContextWindowImpl
     implements _ModelPricesAndContextWindow {
   const _$ModelPricesAndContextWindowImpl(
-      {@JsonKey(name: 'max_tokens') this.maxTokens,
-      @JsonKey(name: 'max_input_tokens') this.maxInputTokens,
-      @JsonKey(name: 'max_output_tokens') this.maxOutputTokens,
-      @JsonKey(name: 'max_images_per_prompt') this.maxImagesPerPrompt,
-      @JsonKey(name: 'max_video_length') this.maxVideoLength,
-      @JsonKey(name: 'max_videos_per_prompt') this.maxVideosPerPrompt,
-      @JsonKey(name: 'input_cost_per_token') this.inputCostPerToken,
-      @JsonKey(name: 'output_cost_per_token') this.outputCostPerToken,
-      @JsonKey(name: 'input_cost_per_pixel') this.inputCostPerPixel,
-      @JsonKey(name: 'output_cost_per_pixel') this.outputCostPerPixel,
-      @JsonKey(name: 'input_cost_per_second') this.inputCostPerSecond,
-      @JsonKey(name: 'output_cost_per_second') this.outputCostPerSecond,
-      @JsonKey(name: 'input_cost_per_request') this.inputCostPerRequest,
-      @JsonKey(name: 'output_cost_per_image') this.outputCostPerImage,
-      @JsonKey(name: 'output_vector_size') this.outputVectorSize,
-      @JsonKey(name: 'litellm_provider') this.litellmProvider,
-      @JsonKey(name: 'mode') this.mode,
-      @JsonKey(name: 'source') this.source,
-      @JsonKey(name: 'supports_function_calling') this.supportsFunctionCalling,
-      @JsonKey(name: 'supports_parallel_function_calling')
+      {this.maxTokens,
+      this.maxInputTokens,
+      this.maxOutputTokens,
+      this.maxImagesPerPrompt,
+      this.maxVideoLength,
+      this.maxVideosPerPrompt,
+      this.inputCostPerToken,
+      this.outputCostPerToken,
+      this.inputCostPerPixel,
+      this.outputCostPerPixel,
+      this.inputCostPerSecond,
+      this.outputCostPerSecond,
+      this.inputCostPerRequest,
+      this.outputCostPerImage,
+      this.outputVectorSize,
+      this.litellmProvider,
+      this.mode,
+      this.source,
+      this.supportsFunctionCalling,
       this.supportsParallelFunctionCalling,
-      @JsonKey(name: 'supports_tool_choice') this.supportsToolChoice,
-      @JsonKey(name: 'supports_vision') this.supportsVision,
-      @JsonKey(name: 'tool_use_system_prompt_tokens')
+      this.supportsToolChoice,
+      this.supportsVision,
       this.toolUseSystemPromptTokens});
 
   factory _$ModelPricesAndContextWindowImpl.fromJson(
@@ -455,73 +427,50 @@ class _$ModelPricesAndContextWindowImpl
       _$$ModelPricesAndContextWindowImplFromJson(json);
 
   @override
-  @JsonKey(name: 'max_tokens')
   final int? maxTokens;
   @override
-  @JsonKey(name: 'max_input_tokens')
   final int? maxInputTokens;
   @override
-  @JsonKey(name: 'max_output_tokens')
   final int? maxOutputTokens;
   @override
-  @JsonKey(name: 'max_images_per_prompt')
   final int? maxImagesPerPrompt;
   @override
-  @JsonKey(name: 'max_video_length')
   final int? maxVideoLength;
   @override
-  @JsonKey(name: 'max_videos_per_prompt')
   final int? maxVideosPerPrompt;
   @override
-  @JsonKey(name: 'input_cost_per_token')
   final double? inputCostPerToken;
   @override
-  @JsonKey(name: 'output_cost_per_token')
   final double? outputCostPerToken;
   @override
-  @JsonKey(name: 'input_cost_per_pixel')
   final double? inputCostPerPixel;
   @override
-  @JsonKey(name: 'output_cost_per_pixel')
   final double? outputCostPerPixel;
   @override
-  @JsonKey(name: 'input_cost_per_second')
   final double? inputCostPerSecond;
   @override
-  @JsonKey(name: 'output_cost_per_second')
   final double? outputCostPerSecond;
   @override
-  @JsonKey(name: 'input_cost_per_request')
   final double? inputCostPerRequest;
   @override
-  @JsonKey(name: 'output_cost_per_image')
   final double? outputCostPerImage;
   @override
-  @JsonKey(name: 'output_vector_size')
   final int? outputVectorSize;
   @override
-  @JsonKey(name: 'litellm_provider')
   final String? litellmProvider;
   @override
-  @JsonKey(name: 'mode')
   final String? mode;
   @override
-  @JsonKey(name: 'source')
   final String? source;
   @override
-  @JsonKey(name: 'supports_function_calling')
   final bool? supportsFunctionCalling;
   @override
-  @JsonKey(name: 'supports_parallel_function_calling')
   final bool? supportsParallelFunctionCalling;
   @override
-  @JsonKey(name: 'supports_tool_choice')
   final bool? supportsToolChoice;
   @override
-  @JsonKey(name: 'supports_vision')
   final bool? supportsVision;
   @override
-  @JsonKey(name: 'tool_use_system_prompt_tokens')
   final int? toolUseSystemPromptTokens;
 
   @override
@@ -631,107 +580,79 @@ class _$ModelPricesAndContextWindowImpl
 abstract class _ModelPricesAndContextWindow
     implements ModelPricesAndContextWindow {
   const factory _ModelPricesAndContextWindow(
-      {@JsonKey(name: 'max_tokens') final int? maxTokens,
-      @JsonKey(name: 'max_input_tokens') final int? maxInputTokens,
-      @JsonKey(name: 'max_output_tokens') final int? maxOutputTokens,
-      @JsonKey(name: 'max_images_per_prompt') final int? maxImagesPerPrompt,
-      @JsonKey(name: 'max_video_length') final int? maxVideoLength,
-      @JsonKey(name: 'max_videos_per_prompt') final int? maxVideosPerPrompt,
-      @JsonKey(name: 'input_cost_per_token') final double? inputCostPerToken,
-      @JsonKey(name: 'output_cost_per_token') final double? outputCostPerToken,
-      @JsonKey(name: 'input_cost_per_pixel') final double? inputCostPerPixel,
-      @JsonKey(name: 'output_cost_per_pixel') final double? outputCostPerPixel,
-      @JsonKey(name: 'input_cost_per_second') final double? inputCostPerSecond,
-      @JsonKey(name: 'output_cost_per_second')
-      final double? outputCostPerSecond,
-      @JsonKey(name: 'input_cost_per_request')
-      final double? inputCostPerRequest,
-      @JsonKey(name: 'output_cost_per_image') final double? outputCostPerImage,
-      @JsonKey(name: 'output_vector_size') final int? outputVectorSize,
-      @JsonKey(name: 'litellm_provider') final String? litellmProvider,
-      @JsonKey(name: 'mode') final String? mode,
-      @JsonKey(name: 'source') final String? source,
-      @JsonKey(name: 'supports_function_calling')
-      final bool? supportsFunctionCalling,
-      @JsonKey(name: 'supports_parallel_function_calling')
-      final bool? supportsParallelFunctionCalling,
-      @JsonKey(name: 'supports_tool_choice') final bool? supportsToolChoice,
-      @JsonKey(name: 'supports_vision') final bool? supportsVision,
-      @JsonKey(name: 'tool_use_system_prompt_tokens')
-      final int?
-          toolUseSystemPromptTokens}) = _$ModelPricesAndContextWindowImpl;
+          {final int? maxTokens,
+          final int? maxInputTokens,
+          final int? maxOutputTokens,
+          final int? maxImagesPerPrompt,
+          final int? maxVideoLength,
+          final int? maxVideosPerPrompt,
+          final double? inputCostPerToken,
+          final double? outputCostPerToken,
+          final double? inputCostPerPixel,
+          final double? outputCostPerPixel,
+          final double? inputCostPerSecond,
+          final double? outputCostPerSecond,
+          final double? inputCostPerRequest,
+          final double? outputCostPerImage,
+          final int? outputVectorSize,
+          final String? litellmProvider,
+          final String? mode,
+          final String? source,
+          final bool? supportsFunctionCalling,
+          final bool? supportsParallelFunctionCalling,
+          final bool? supportsToolChoice,
+          final bool? supportsVision,
+          final int? toolUseSystemPromptTokens}) =
+      _$ModelPricesAndContextWindowImpl;
 
   factory _ModelPricesAndContextWindow.fromJson(Map<String, dynamic> json) =
       _$ModelPricesAndContextWindowImpl.fromJson;
 
   @override
-  @JsonKey(name: 'max_tokens')
   int? get maxTokens;
   @override
-  @JsonKey(name: 'max_input_tokens')
   int? get maxInputTokens;
   @override
-  @JsonKey(name: 'max_output_tokens')
   int? get maxOutputTokens;
   @override
-  @JsonKey(name: 'max_images_per_prompt')
   int? get maxImagesPerPrompt;
   @override
-  @JsonKey(name: 'max_video_length')
   int? get maxVideoLength;
   @override
-  @JsonKey(name: 'max_videos_per_prompt')
   int? get maxVideosPerPrompt;
   @override
-  @JsonKey(name: 'input_cost_per_token')
   double? get inputCostPerToken;
   @override
-  @JsonKey(name: 'output_cost_per_token')
   double? get outputCostPerToken;
   @override
-  @JsonKey(name: 'input_cost_per_pixel')
   double? get inputCostPerPixel;
   @override
-  @JsonKey(name: 'output_cost_per_pixel')
   double? get outputCostPerPixel;
   @override
-  @JsonKey(name: 'input_cost_per_second')
   double? get inputCostPerSecond;
   @override
-  @JsonKey(name: 'output_cost_per_second')
   double? get outputCostPerSecond;
   @override
-  @JsonKey(name: 'input_cost_per_request')
   double? get inputCostPerRequest;
   @override
-  @JsonKey(name: 'output_cost_per_image')
   double? get outputCostPerImage;
   @override
-  @JsonKey(name: 'output_vector_size')
   int? get outputVectorSize;
   @override
-  @JsonKey(name: 'litellm_provider')
   String? get litellmProvider;
   @override
-  @JsonKey(name: 'mode')
   String? get mode;
   @override
-  @JsonKey(name: 'source')
   String? get source;
   @override
-  @JsonKey(name: 'supports_function_calling')
   bool? get supportsFunctionCalling;
   @override
-  @JsonKey(name: 'supports_parallel_function_calling')
   bool? get supportsParallelFunctionCalling;
   @override
-  @JsonKey(name: 'supports_tool_choice')
   bool? get supportsToolChoice;
   @override
-  @JsonKey(name: 'supports_vision')
   bool? get supportsVision;
   @override
-  @JsonKey(name: 'tool_use_system_prompt_tokens')
   int? get toolUseSystemPromptTokens;
   @override
   @JsonKey(ignore: true)
