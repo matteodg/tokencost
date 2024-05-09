@@ -23,30 +23,30 @@ const testString = 'Hello, world!';
 
 void main() {
   group('basic', () {
-    test('scale', () {
+    test('decimalDigits', () {
       const price = 12.34567891234;
       expect('12.34567891234', price.toString());
       expect('0.0', 0.00000000000000000000.toString());
       expect('5e-7', 0.0000005.toString());
 
-      const scale = 11;
-      final priceMinorUnits = price * pow(10, scale);
-      final money = Money.fromInt(priceMinorUnits.toInt(), scale: scale, code: 'USD');
+      const decimalDigits = 11;
+      final priceMinorUnits = price * pow(10, decimalDigits);
+      final money = Money.fromInt(priceMinorUnits.toInt(), decimalDigits: decimalDigits, isoCode: 'USD');
       expect(money.minorUnits, BigInt.parse('1234567891234'));
       expect(money.integerPart, BigInt.parse('12'));
       expect(money.decimalPart, BigInt.parse('34567891234'));
-      expect(money.scale, equals(scale));
+      expect(money.decimalDigits, equals(decimalDigits));
       expect(money.isNegative, isFalse);
       expect(money.isPositive, isTrue);
       expect(money.isZero, isFalse);
       expect(money.sign, equals(1));
 
-      final money2 = Money.fromInt(150000, scale: 11, code: 'USD');
-      final result = Money.fromFixed(money2.amount.multiply(15), scale: 11, code: 'USD');
+      final money2 = Money.fromInt(150000, decimalDigits: 11, isoCode: 'USD');
+      final result = Money.fromFixed(money2.amount.multiply(15), decimalDigits: 11, isoCode: 'USD');
       expect(result.minorUnits, BigInt.parse('2250000'));
       expect(result.integerPart, BigInt.parse('0'));
       expect(result.decimalPart, BigInt.parse('2250000'));
-      expect(result.scale, equals(11));
+      expect(result.decimalDigits, equals(11));
       expect(result.isNegative, isFalse);
       expect(result.isPositive, isTrue);
       expect(result.isZero, isFalse);
@@ -182,9 +182,9 @@ void main() {
 
   group('calculateCostByTokens', () {
     final testData = <(int, String, TokenType, Money)>[
-      (10, 'gpt-3.5-turbo', TokenType.input, Money.fromInt(150, scale: 7, code: 'USD')),
-      (5, 'gpt-4', TokenType.output, Money.fromInt(30, scale: 5, code: 'USD')),
-      (10, 'ai21.j2-mid-v1', TokenType.input, Money.fromInt(1250, scale: 7, code: 'USD')),
+      (10, 'gpt-3.5-turbo', TokenType.input, Money.fromInt(150, decimalDigits: 7, isoCode: 'USD')),
+      (5, 'gpt-4', TokenType.output, Money.fromInt(30, decimalDigits: 5, isoCode: 'USD')),
+      (10, 'ai21.j2-mid-v1', TokenType.input, Money.fromInt(1250, decimalDigits: 7, isoCode: 'USD')),
     ];
 
     for (final (numTokens, model, tokenType, expectedCost) in testData) {
@@ -204,21 +204,21 @@ void main() {
     // Costs from https://openai.com/pricing
     // https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo
     final promptModelExpectedOutput1 = <(dynamic, String, Money)>[
-      (testMessages, 'gpt-3.5-turbo', Money.fromInt(15 * 15, scale: 7, code: 'USD')),
-      (testMessages, 'gpt-3.5-turbo-0301', Money.fromInt(15 * 17, scale: 7, code: 'USD')),
-      (testMessages, 'gpt-3.5-turbo-0613', Money.fromInt(15 * 15, scale: 7, code: 'USD')),
-      (testMessages, 'gpt-3.5-turbo-16k', Money.fromInt(3 * 15, scale: 6, code: 'USD')),
-      (testMessages, 'gpt-3.5-turbo-16k-0613', Money.fromInt(3 * 15, scale: 6, code: 'USD')),
-      (testMessages, 'gpt-3.5-turbo-1106', Money.fromInt(1 * 15, scale: 6, code: 'USD')),
-      (testMessages, 'gpt-3.5-turbo-instruct', Money.fromInt(15 * 15, scale: 7, code: 'USD')),
-      (testMessages, 'gpt-4', Money.fromInt(3 * 15, scale: 5, code: 'USD')),
-      (testMessages, 'gpt-4-0314', Money.fromInt(3 * 15, scale: 5, code: 'USD')),
-      (testMessages, 'gpt-4-32k', Money.fromInt(6 * 15, scale: 5, code: 'USD')),
-      (testMessages, 'gpt-4-32k-0314', Money.fromInt(6 * 15, scale: 5, code: 'USD')),
-      (testMessages, 'gpt-4-0613', Money.fromInt(3 * 15, scale: 5, code: 'USD')),
-      (testMessages, 'gpt-4-1106-preview', Money.fromInt(1 * 15, scale: 5, code: 'USD')),
-      (testMessages, 'gpt-4-vision-preview', Money.fromInt(1 * 15, scale: 5, code: 'USD')),
-      (testString, 'text-embedding-ada-002', Money.fromInt(1 * 4, scale: 7, code: 'USD')),
+      (testMessages, 'gpt-3.5-turbo', Money.fromInt(15 * 15, decimalDigits: 7, isoCode: 'USD')),
+      (testMessages, 'gpt-3.5-turbo-0301', Money.fromInt(15 * 17, decimalDigits: 7, isoCode: 'USD')),
+      (testMessages, 'gpt-3.5-turbo-0613', Money.fromInt(15 * 15, decimalDigits: 7, isoCode: 'USD')),
+      (testMessages, 'gpt-3.5-turbo-16k', Money.fromInt(3 * 15, decimalDigits: 6, isoCode: 'USD')),
+      (testMessages, 'gpt-3.5-turbo-16k-0613', Money.fromInt(3 * 15, decimalDigits: 6, isoCode: 'USD')),
+      (testMessages, 'gpt-3.5-turbo-1106', Money.fromInt(1 * 15, decimalDigits: 6, isoCode: 'USD')),
+      (testMessages, 'gpt-3.5-turbo-instruct', Money.fromInt(15 * 15, decimalDigits: 7, isoCode: 'USD')),
+      (testMessages, 'gpt-4', Money.fromInt(3 * 15, decimalDigits: 5, isoCode: 'USD')),
+      (testMessages, 'gpt-4-0314', Money.fromInt(3 * 15, decimalDigits: 5, isoCode: 'USD')),
+      (testMessages, 'gpt-4-32k', Money.fromInt(6 * 15, decimalDigits: 5, isoCode: 'USD')),
+      (testMessages, 'gpt-4-32k-0314', Money.fromInt(6 * 15, decimalDigits: 5, isoCode: 'USD')),
+      (testMessages, 'gpt-4-0613', Money.fromInt(3 * 15, decimalDigits: 5, isoCode: 'USD')),
+      (testMessages, 'gpt-4-1106-preview', Money.fromInt(1 * 15, decimalDigits: 5, isoCode: 'USD')),
+      (testMessages, 'gpt-4-vision-preview', Money.fromInt(1 * 15, decimalDigits: 5, isoCode: 'USD')),
+      (testString, 'text-embedding-ada-002', Money.fromInt(1 * 4, decimalDigits: 7, isoCode: 'USD')),
     ];
 
     /// Test that the cost calculation is correct.
@@ -270,21 +270,21 @@ void main() {
 
   group('calculateCompletionCost', () {
     final promptModelExpectedOutput2 = <(String, String, Money)>[
-      (testString, 'gpt-3.5-turbo', Money.fromInt(2 * 4, scale: 6, code: 'USD')),
-      (testString, 'gpt-3.5-turbo-0301', Money.fromInt(2 * 4, scale: 6, code: 'USD')),
-      (testString, 'gpt-3.5-turbo-0613', Money.fromInt(2 * 4, scale: 6, code: 'USD')),
-      (testString, 'gpt-3.5-turbo-16k', Money.fromInt(4 * 4, scale: 6, code: 'USD')),
-      (testString, 'gpt-3.5-turbo-16k-0613', Money.fromInt(4 * 4, scale: 6, code: 'USD')),
-      (testString, 'gpt-3.5-turbo-1106', Money.fromInt(2 * 4, scale: 6, code: 'USD')),
-      (testString, 'gpt-3.5-turbo-instruct', Money.fromInt(2 * 4, scale: 6, code: 'USD')),
-      (testString, 'gpt-4', Money.fromInt(6 * 4, scale: 5, code: 'USD')),
-      (testString, 'gpt-4-0314', Money.fromInt(6 * 4, scale: 5, code: 'USD')),
-      (testString, 'gpt-4-32k', Money.fromInt(12 * 4, scale: 5, code: 'USD')),
-      (testString, 'gpt-4-32k-0314', Money.fromInt(12 * 4, scale: 5, code: 'USD')),
-      (testString, 'gpt-4-0613', Money.fromInt(6 * 4, scale: 5, code: 'USD')),
-      (testString, 'gpt-4-1106-preview', Money.fromInt(3 * 4, scale: 5, code: 'USD')),
-      (testString, 'gpt-4-vision-preview', Money.fromInt(3 * 4, scale: 5, code: 'USD')),
-      (testString, 'text-embedding-ada-002', Money.fromInt(0 * 4, scale: 0, code: 'USD')),
+      (testString, 'gpt-3.5-turbo', Money.fromInt(2 * 4, decimalDigits: 6, isoCode: 'USD')),
+      (testString, 'gpt-3.5-turbo-0301', Money.fromInt(2 * 4, decimalDigits: 6, isoCode: 'USD')),
+      (testString, 'gpt-3.5-turbo-0613', Money.fromInt(2 * 4, decimalDigits: 6, isoCode: 'USD')),
+      (testString, 'gpt-3.5-turbo-16k', Money.fromInt(4 * 4, decimalDigits: 6, isoCode: 'USD')),
+      (testString, 'gpt-3.5-turbo-16k-0613', Money.fromInt(4 * 4, decimalDigits: 6, isoCode: 'USD')),
+      (testString, 'gpt-3.5-turbo-1106', Money.fromInt(2 * 4, decimalDigits: 6, isoCode: 'USD')),
+      (testString, 'gpt-3.5-turbo-instruct', Money.fromInt(2 * 4, decimalDigits: 6, isoCode: 'USD')),
+      (testString, 'gpt-4', Money.fromInt(6 * 4, decimalDigits: 5, isoCode: 'USD')),
+      (testString, 'gpt-4-0314', Money.fromInt(6 * 4, decimalDigits: 5, isoCode: 'USD')),
+      (testString, 'gpt-4-32k', Money.fromInt(12 * 4, decimalDigits: 5, isoCode: 'USD')),
+      (testString, 'gpt-4-32k-0314', Money.fromInt(12 * 4, decimalDigits: 5, isoCode: 'USD')),
+      (testString, 'gpt-4-0613', Money.fromInt(6 * 4, decimalDigits: 5, isoCode: 'USD')),
+      (testString, 'gpt-4-1106-preview', Money.fromInt(3 * 4, decimalDigits: 5, isoCode: 'USD')),
+      (testString, 'gpt-4-vision-preview', Money.fromInt(3 * 4, decimalDigits: 5, isoCode: 'USD')),
+      (testString, 'text-embedding-ada-002', Money.fromInt(0 * 4, decimalDigits: 0, isoCode: 'USD')),
     ];
     for (final (prompt, model, expectedOutput) in promptModelExpectedOutput2) {
       test(model, () {

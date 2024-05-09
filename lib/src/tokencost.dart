@@ -303,8 +303,8 @@ enum TokenType {
     final scaledIntCostPerToken = (doubleCostPerToken * pow(10, tokenCost._maxScale!)).toInt();
     return Money.fromInt(
       scaledIntCostPerToken * numTokens,
-      scale: tokenCost._maxScale,
-      code: 'USD',
+      decimalDigits: tokenCost._maxScale,
+      isoCode: 'USD',
     );
   }
 
@@ -320,8 +320,8 @@ enum TokenType {
     final scaledIntCostPerPixel = (doubleCostPerPixel * pow(10, tokenCost._maxScale!)).toInt();
     return Money.fromInt(
       scaledIntCostPerPixel * numPixels,
-      scale: tokenCost._maxScale,
-      code: 'USD',
+      decimalDigits: tokenCost._maxScale,
+      isoCode: 'USD',
     );
   }
 }
