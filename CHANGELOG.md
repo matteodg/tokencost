@@ -1,3 +1,7 @@
+# 0.2.9
+- Update prices and context window local file to May 21, 2024.
+- Update all dependencies to their latest versions.
+
 # 0.2.8
 - Update prices and context window local file to May 09, 2024.
 - Update all dependencies to their latest versions.

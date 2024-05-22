@@ -4,9 +4,6 @@
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
 
-## ❗Important❗
-**Breaking change in the API for 0.2.0**: now using [Money2][money2_link] package for currency handling.
-
 
 ## Overview
 Clientside token counting + price estimation for LLM apps and AI agents.
