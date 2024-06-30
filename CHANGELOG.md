@@ -1,3 +1,7 @@
+# 0.2.10
+- Update prices and context window local file to Jun 30, 2024.
+- Add `TokenCost.calculateCostByDuration()` to calculate the cost using the duration in seconds.
+
 # 0.2.9
 - Update prices and context window local file to May 21, 2024.
 - Update all dependencies to their latest versions.
