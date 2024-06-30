@@ -273,6 +273,19 @@ class TokenCost {
     return tokenType.calculateCostByTokens(this, numTokens, model);
   }
 
+  /// Calculate the cost based on the number of seconds and the model.
+  ///
+  /// Arguments:
+  /// - [duration] The duration of the audio file.
+  /// - [model] The model name.
+  /// - [tokenType] Type of seconds ('input' or 'output').
+  ///
+  /// Returns:
+  /// - [Money] The calculated cost in USD.
+  Money calculateCostByDuration(Duration duration, String model, TokenType tokenType) {
+    return tokenType.calculateCostByDuration(this, duration, model);
+  }
+
   /// Calculate the cost based on the number of pixels and the model.
   ///
   /// Arguments:
@@ -303,6 +316,23 @@ enum TokenType {
     final scaledIntCostPerToken = (doubleCostPerToken * pow(10, tokenCost._maxScale!)).toInt();
     return Money.fromInt(
       scaledIntCostPerToken * numTokens,
+      decimalDigits: tokenCost._maxScale,
+      isoCode: 'USD',
+    );
+  }
+
+  Money calculateCostByDuration(
+    TokenCost tokenCost,
+    Duration duration,
+    String model,
+  ) {
+    final doubleCostPerSecond = switch (this) {
+      TokenType.input => tokenCost._tokenCosts![model]!.inputCostPerSecond ?? 0.0,
+      TokenType.output => tokenCost._tokenCosts![model]!.outputCostPerSecond ?? 0.0
+    };
+    final scaledIntCostPerSecond = (doubleCostPerSecond * pow(10, tokenCost._maxScale!)).toInt();
+    return Money.fromInt(
+      scaledIntCostPerSecond * duration.inSeconds,
       decimalDigits: tokenCost._maxScale,
       isoCode: 'USD',
     );

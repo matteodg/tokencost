@@ -320,4 +320,15 @@ void main() {
       );
     });
   });
+
+  group('calculateCostByDuration', () {
+    test('whisper-1', () {
+      final actualCost = tokenCost.calculateCostByDuration(
+        Duration(seconds: 640.4400024414062.toInt()),
+        'whisper-1',
+        TokenType.output,
+      );
+      expect(actualCost, Money.fromInt(6400000000, decimalDigits: 11, isoCode: 'USD'));
+    });
+  });
 }
